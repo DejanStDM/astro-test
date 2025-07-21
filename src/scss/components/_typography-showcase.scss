@@ -18,11 +18,11 @@
     padding: 2rem 1rem;
     border-bottom: 1px solid #e5e7eb;
 
-    @include md {
+    @media (min-width: $md) {
       padding: 3rem 2rem;
     }
 
-    @include lg {
+    @media (min-width: $lg) {
       padding: 4rem 5rem;
     }
   }
@@ -34,7 +34,7 @@
     max-width: 1440px;
     margin: 0 auto;
 
-    @include mobile {
+    @media (max-width: 767px) {
       flex-direction: column;
       gap: 1.5rem;
     }
@@ -47,7 +47,7 @@
       width: 100px;
       height: auto;
 
-      @include mobile {
+      @media (max-width: 767px) {
         width: 70px;
       }
     }
