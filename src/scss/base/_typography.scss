@@ -282,15 +282,15 @@ p {
 
 // Section Pre-title
 .section-pretitle {
-  @include heading-h3($weight-bold);
   color: $primary-500;
   margin-bottom: 1.25rem;
+  @include heading-h3($weight-bold);
 }
 
 // Section Post-title
 .section-posttitle {
-  @include paragraph-p1($weight-regular);
   margin-top: 1rem;
+  @include paragraph-p1($weight-regular);
 }
 
 // Section Header Container
