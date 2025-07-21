@@ -1,4 +1,3 @@
-
 // UTILS
 @use "./utils/variables";
 @use "./utils/mixins";
@@ -12,6 +11,7 @@
 @use "./base/globals";
 
 // LAYOUT
+@use "./layout/container";
 
 // COMPONENTS
 @use "./components/typography-showcase";
