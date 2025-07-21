@@ -1,0 +1,360 @@
+// ==========================================================================
+// Import Variables
+// ==========================================================================
+@use "./variables" as *;
+
+// ==========================================================================
+// Media Query Mixins (Mobile-First)
+// ==========================================================================
+
+@mixin sm {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
+
+// Legacy mixins for backwards compatibility
+@mixin mobile {
+  @media (max-width: #{$md - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $md) and (max-width: #{$lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+
+// ==========================================================================
+// Typography Mixins
+// ==========================================================================
+
+// Display Font D1 (Mobile-First)
+@mixin display-d1($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 120px;
+    line-height: 126px;
+  }
+}
+
+// Display Font D2 (Mobile-First)
+@mixin display-d2($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 72px;
+    line-height: 94px;
+  }
+}
+
+// Heading H1 (Mobile-First)
+@mixin heading-h1($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 64px;
+    line-height: 83px;
+  }
+}
+
+// Heading H1 Small (Mobile-First)
+@mixin heading-h1-small($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 54px;
+    line-height: 70px;
+  }
+}
+
+// Heading H2 (Mobile-First)
+@mixin heading-h2($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+
+// Heading H2 Medium (Mobile-First)
+@mixin heading-h2-medium($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
+// Heading H2 Small (Mobile-First)
+@mixin heading-h2-small($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 36px;
+    line-height: 47px;
+  }
+}
+
+// Heading H3 (Mobile-First)
+@mixin heading-h3($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+// Heading H3 Small (Mobile-First)
+@mixin heading-h3-small($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+// Heading H4 (Mobile-First)
+@mixin heading-h4($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+// Heading H5 (Mobile-First)
+@mixin heading-h5($weight: $weight-regular) {
+  font-family: $font-primary;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: $primary-900;
+
+  @include md {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+// Body Text (Mobile-First)
+@mixin body-text($weight: $weight-regular) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: $neutral-700;
+
+  @include md {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+// ==========================================================================
+// Paragraph Typography Mixins (Mobile-First)
+// ==========================================================================
+
+// Paragraph P1 (Mobile-First)
+@mixin paragraph-p1($weight: $weight-regular) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: $black;
+
+  @include md {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+// Paragraph P2 (Mobile-First)
+@mixin paragraph-p2($weight: $weight-regular) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: $black;
+
+  @include md {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+// Paragraph P3 (Mobile-First)
+@mixin paragraph-p3($weight: $weight-regular) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: $black;
+
+  @include md {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+// Paragraph P4 (Mobile-First)
+@mixin paragraph-p4($weight: $weight-regular) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: $black;
+
+  @include md {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+// Paragraph P5 (Mobile-First)
+@mixin paragraph-p5($weight: $weight-regular) {
+  font-family: $font-secondary;
+  font-weight: $weight;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: $black;
+
+  @include md {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+// ==========================================================================
+// Utility Mixins
+// ==========================================================================
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin container($max-width: 1440px) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include sm {
+    padding: 0 1.5rem;
+  }
+
+  @include md {
+    padding: 0 2rem;
+  }
+
+  @include lg {
+    padding: 0 4rem;
+  }
+}

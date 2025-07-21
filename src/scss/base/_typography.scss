@@ -1,1 +1,462 @@
-// typography rules and typography helper classes
+// ==========================================================================
+// Typography System
+// ==========================================================================
+
+// Import variables and mixins
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// ==========================================================================
+// Base Typography
+// ==========================================================================
+
+body {
+  font-family: $font-secondary;
+  font-weight: $weight-regular;
+  color: $primary-text-black;
+  line-height: 1.6;
+}
+
+// ==========================================================================
+// Display Typography
+// ==========================================================================
+
+// Display D1 Variants
+.display-d1 {
+  @include display-d1();
+
+  &--regular {
+    @include display-d1($weight-regular);
+  }
+
+  &--semi-bold {
+    @include display-d1($weight-semi-bold);
+  }
+
+  &--bold {
+    @include display-d1($weight-bold);
+  }
+}
+
+// Display D2 Variants
+.display-d2 {
+  @include display-d2();
+
+  &--regular {
+    @include display-d2($weight-regular);
+  }
+
+  &--bold {
+    @include display-d2($weight-bold);
+  }
+}
+
+// ==========================================================================
+// Heading Typography
+// ==========================================================================
+
+// H1 Variants
+.heading-h1,
+h1 {
+  @include heading-h1();
+
+  &--regular {
+    @include heading-h1($weight-regular);
+  }
+
+  &--semi-bold {
+    @include heading-h1($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h1($weight-bold);
+  }
+}
+
+// H1 Small Variants
+.heading-h1-small {
+  @include heading-h1-small();
+
+  &--regular {
+    @include heading-h1-small($weight-regular);
+  }
+
+  &--semi-bold {
+    @include heading-h1-small($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h1-small($weight-bold);
+  }
+}
+
+// H2 Variants
+.heading-h2,
+h2 {
+  @include heading-h2();
+
+  &--regular {
+    @include heading-h2($weight-regular);
+  }
+
+  &--semi-bold {
+    @include heading-h2($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h2($weight-bold);
+  }
+}
+
+// H2 Medium Variants
+.heading-h2-medium {
+  @include heading-h2-medium();
+
+  &--regular {
+    @include heading-h2-medium($weight-regular);
+  }
+
+  &--semi-bold {
+    @include heading-h2-medium($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h2-medium($weight-bold);
+  }
+}
+
+// H2 Small Variants
+.heading-h2-small {
+  @include heading-h2-small();
+
+  &--regular {
+    @include heading-h2-small($weight-regular);
+  }
+
+  &--medium {
+    @include heading-h2-small($weight-medium);
+  }
+
+  &--semi-bold {
+    @include heading-h2-small($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h2-small($weight-bold);
+  }
+}
+
+// H3 Variants
+.heading-h3,
+h3 {
+  @include heading-h3();
+
+  &--regular {
+    @include heading-h3($weight-regular);
+  }
+
+  &--medium {
+    @include heading-h3($weight-medium);
+  }
+
+  &--semi-bold {
+    @include heading-h3($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h3($weight-bold);
+  }
+}
+
+// H3 Small Variants
+.heading-h3-small {
+  @include heading-h3-small();
+
+  &--regular {
+    @include heading-h3-small($weight-regular);
+  }
+
+  &--medium {
+    @include heading-h3-small($weight-medium);
+  }
+
+  &--semi-bold {
+    @include heading-h3-small($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h3-small($weight-bold);
+  }
+}
+
+// H4 Variants
+.heading-h4,
+h4 {
+  @include heading-h4();
+
+  &--regular {
+    @include heading-h4($weight-regular);
+  }
+
+  &--semi-bold {
+    @include heading-h4($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h4($weight-bold);
+  }
+}
+
+// H5 Variants
+.heading-h5,
+h5 {
+  @include heading-h5();
+
+  &--light {
+    @include heading-h5($weight-light);
+  }
+
+  &--regular {
+    @include heading-h5($weight-regular);
+  }
+
+  &--semi-bold {
+    @include heading-h5($weight-semi-bold);
+  }
+
+  &--bold {
+    @include heading-h5($weight-bold);
+  }
+}
+
+// H6 (using H5 styling as base)
+.heading-h6,
+h6 {
+  font-size: clamp(10px, 1.2vw, 16px);   
+  line-height: clamp(16px, 1.6vw, 22px);  
+  @include heading-h5();
+
+  @include desktop {
+    font-size: 16px;  
+    line-height: 22px;
+  }
+}
+
+// ==========================================================================
+// Body Typography
+// ==========================================================================
+
+.body-text {
+  @include body-text();
+
+  &--regular {
+    @include body-text($weight-regular);
+  }
+
+  &--medium {
+    @include body-text($weight-medium);
+  }
+
+  &--semi-bold {
+    @include body-text($weight-semi-bold);
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+  @include body-text();
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ==========================================================================
+// Utility Classes
+// ==========================================================================
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: $primary-500;
+}
+
+.text-secondary {
+  color: $neutral-700;
+}
+
+.text-muted {
+  color: $neutral-500;
+}
+
+.text-black {
+  color: $primary-text-black;
+}
+
+.text-white {
+  color: $white;
+}
+
+// Weight utilities
+.font-light {
+  font-weight: $weight-light;
+}
+
+.font-regular {
+  font-weight: $weight-regular;
+}
+
+.font-medium {
+  font-weight: $weight-medium;
+}
+
+.font-semi-bold {
+  font-weight: $weight-semi-bold;
+}
+
+.font-bold {
+  font-weight: $weight-bold;
+}
+
+// ==========================================================================
+// Paragraph Typography
+// ==========================================================================
+
+// Paragraph P1 Variants
+.paragraph-p1 {
+  @include paragraph-p1();
+
+  &--light {
+    @include paragraph-p1($weight-light);
+  }
+
+  &--regular {
+    @include paragraph-p1($weight-regular);
+  }
+
+  &--medium {
+    @include paragraph-p1($weight-medium);
+  }
+
+  &--bold {
+    @include paragraph-p1($weight-bold);
+  }
+}
+
+// Paragraph P2 Variants
+.paragraph-p2 {
+  @include paragraph-p2();
+
+  &--light {
+    @include paragraph-p2($weight-light);
+  }
+
+  &--regular {
+    @include paragraph-p2($weight-regular);
+  }
+
+  &--medium {
+    @include paragraph-p2($weight-medium);
+  }
+
+  &--bold {
+    @include paragraph-p2($weight-bold);
+  }
+}
+
+// Paragraph P3 Variants
+.paragraph-p3 {
+  @include paragraph-p3();
+
+  &--light {
+    @include paragraph-p3($weight-light);
+  }
+
+  &--regular {
+    @include paragraph-p3($weight-regular);
+  }
+
+  &--medium {
+    @include paragraph-p3($weight-medium);
+  }
+
+  &--bold {
+    @include paragraph-p3($weight-bold);
+  }
+}
+
+// Paragraph P4 Variants
+.paragraph-p4 {
+  @include paragraph-p4();
+
+  &--light {
+    @include paragraph-p4($weight-light);
+  }
+
+  &--regular {
+    @include paragraph-p4($weight-regular);
+  }
+
+  &--medium {
+    @include paragraph-p4($weight-medium);
+  }
+
+  &--bold {
+    @include paragraph-p4($weight-bold);
+  }
+}
+
+// Paragraph P5 Variants
+.paragraph-p5 {
+  @include paragraph-p5();
+
+  &--light {
+    @include paragraph-p5($weight-light);
+  }
+
+  &--regular {
+    @include paragraph-p5($weight-regular);
+  }
+
+  &--medium {
+    @include paragraph-p5($weight-medium);
+  }
+
+  &--bold {
+    @include paragraph-p5($weight-bold);
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+    @include paragraph-p5($weight-bold);
+  }
+}
+
+// ==========================================================================
+// Responsive Typography Utilities
+// ==========================================================================
+
+.text-responsive {
+  font-size: 0.9em;
+  line-height: 1.4;
+
+  @include md {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  @include lg {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+}

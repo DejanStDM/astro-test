@@ -1,0 +1,64 @@
+---
+// DevNav.astro: Dev navigation component using Bootstrap 5 navbar
+---
+<nav class="navbar navbar-expand-lg navbar-light bg-light dev-nav">
+  <div class="container-fluid">
+    <a class="navbar-brand dev-nav__brand" href="/">Dev Index</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#devNavBar" aria-controls="devNavBar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="devNavBar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 dev-nav__list">
+       
+        <!-- Design pages -->
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/homepage">Home page</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/about-us">About us</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/service">Service</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/selected-works">Selected works</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/contact-us">Contact us</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/privacy-policy">Privacy policy</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/blog-main">Blog</a>  
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/blog-single">Blog single</a>
+        </li>
+        <li class="nav-item dev-nav__item">
+          <a class="nav-link dev-nav__link" href="/work-single">Work single</a> 
+        </li>
+
+
+
+
+
+        <!-- Design System dropdown menu -->
+        <li class="nav-item dev-nav__item dropdown">
+          <a class="nav-link dev-nav__link dropdown-toggle" href="#" id="designSystemDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Design System
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="designSystemDropdown">
+            <li><a class="dropdown-item" href="/design-system/typography">Typography</a></li>
+            <li><a class="dropdown-item" href="/design-system/colors">Colors</a></li>
+            <li><a class="dropdown-item" href="/design-system/spacing">Spacing</a></li>
+            <li><a class="dropdown-item" href="/design-system/buttons">Buttons</a></li>
+            <li><a class="dropdown-item" href="/design-system/forms">Forms</a></li>
+          </ul>
+        </li>
+       
+        
+      </ul>
+    </div>
+  </div>
+</nav> 

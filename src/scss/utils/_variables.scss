@@ -1,12 +1,59 @@
-//COLOURS
+// ==========================================================================
+// Colors
+// ==========================================================================
 
-//FONTS
+// Primary Colors
+$primary-500: #5b47ff;
+$primary-900: #000e24;
+$primary-text-black: #343434;
 
-//BREAKPOINTS
-$sm: 640px;
-$md: 768px;
+// Neutral Colors
+$neutral-50: #f5f6f9;
+$neutral-200: #d7dbe6;
+$neutral-500: #9ca6c1;
+$neutral-700: #546286;
+
+// Shades
+$white: #fff;
+$black: #000e24;
+
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+// Font Families
+$font-primary:
+  "Outfit",
+  -apple-system,
+  Roboto,
+  Helvetica,
+  sans-serif;
+$font-secondary:
+  "Outfit",
+  -apple-system,
+  Roboto,
+  Helvetica,
+  sans-serif; // Using Outfit as fallback for Supreme
+$font-body:
+  "Inter",
+  -apple-system,
+  Roboto,
+  Helvetica,
+  sans-serif;
+
+// Font Weights
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+// ==========================================================================
+// Breakpoints (Bootstrap Values)
+// ==========================================================================
+$xs: 0;
+$sm: 576px;
+$md: 768px; // Desktop starts here
 $lg: 992px;
 $xl: 1200px;
-$xxl: 1440px;
-$hd: 1800px;
-$uw: 2200px;
+$xxl: 1400px;

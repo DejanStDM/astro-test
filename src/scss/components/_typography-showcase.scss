@@ -1,0 +1,243 @@
+// ==========================================================================
+// Typography Showcase Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.typography-showcase {
+  min-height: 100vh;
+  background: $white;
+
+  // ==========================================================================
+  // Header
+  // ==========================================================================
+
+  &__header {
+    background: $neutral-50;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+
+    @include md {
+      padding: 3rem 2rem;
+    }
+
+    @include lg {
+      padding: 4rem 5rem;
+    }
+  }
+
+  &__header-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    svg {
+      width: 100px;
+      height: auto;
+
+      @include mobile {
+        width: 70px;
+      }
+    }
+  }
+
+  &__header-text {
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0 0 1.25rem 0;
+    color: $primary-text-black;
+    @include heading-h1($weight-bold);
+
+    // Mobile styles already handled by heading-h1 mixin
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: $neutral-700;
+    margin: 0;
+    max-width: 70ch;
+    @include body-text();
+
+    // Mobile styles already handled by body-text mixin
+  }
+
+  // ==========================================================================
+  // Main Content
+  // ==========================================================================
+
+  &__main {
+    padding: 2rem 1rem;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include md {
+      padding: 3rem 2rem;
+    }
+
+    @include lg {
+      padding: 4rem 5rem;
+    }
+
+    @include xl {
+      padding: 4rem 7rem;
+    }
+  }
+
+  // ==========================================================================
+  // Footer
+  // ==========================================================================
+
+  &__footer {
+    background: $neutral-50;
+    padding: 2rem 1rem;
+
+    @include md {
+      padding: 3rem 2rem;
+    }
+
+    @include lg {
+      padding: 4rem 5rem;
+    }
+  }
+
+  &__footer-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__logo {
+    font-family: $font-body;
+    font-size: 1.25rem;
+    font-weight: $weight-bold;
+    letter-spacing: -0.05em;
+  }
+
+  &__footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: 1rem;
+    }
+  }
+
+  &__footer-link {
+    color: $neutral-500;
+    font-family: $font-body;
+    font-size: 1rem;
+    font-weight: $weight-regular;
+    text-decoration: none;
+    letter-spacing: -0.04em;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $neutral-700;
+    }
+  }
+
+  &__footer-divider {
+    height: 1px;
+    background: $neutral-200;
+  }
+
+  &__footer-copyright {
+    color: $neutral-500;
+    font-family: $font-body;
+    font-size: 0.875rem;
+    font-weight: $weight-regular;
+    letter-spacing: -0.035em;
+    margin: 0;
+  }
+}
+
+// ==========================================================================
+// Typography Section
+// ==========================================================================
+
+.typography-section {
+  margin-bottom: 5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid $neutral-200;
+  }
+
+  &__title {
+    color: $primary-900;
+    margin: 0 0 0.75rem 0;
+    @include heading-h4($weight-bold);
+  }
+
+  &__meta {
+    font-size: 0.875rem;
+    color: $neutral-500;
+    margin: 0;
+    letter-spacing: -0.02em;
+    @include body-text();
+  }
+
+  &__examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xl {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// ==========================================================================
+// Typography Example
+// ==========================================================================
+
+.typography-example {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+// ==========================================================================
+// Responsive Adjustments
+// ==========================================================================
+
+// Mobile-first responsive adjustments are now handled by the typography mixins
+// No need for additional overrides since the mixins are already mobile-first
