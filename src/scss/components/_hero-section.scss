@@ -120,24 +120,3 @@
     }
   }
 }
-
-// Dark theme button adaptations for hero section
-.page-sec--hero-section {
-  .btn-secondary {
-    background-color: transparent;
-    color: $white;
-    border-color: $white;
-
-    &:hover {
-      background-color: $white;
-      color: $primary-900;
-      border-color: $white;
-    }
-
-    &:active {
-      background-color: color.adjust($white, $lightness: -10%);
-      color: $primary-900;
-      border-color: color.adjust($white, $lightness: -10%);
-    }
-  }
-}
