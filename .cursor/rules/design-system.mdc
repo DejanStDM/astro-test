@@ -234,3 +234,17 @@ Ensure all design system components meet WCAG 2.1 AA standards:
 - Provide focus states for interactive elements
 - Ensure text is resizable
 - Design with keyboard navigation in mind
+
+## Sass Color Function Usage
+
+- **Do NOT use deprecated color functions** like `darken()`, `lighten()`, `fade-in()`, `fade-out()`, etc.
+- **Always add** `@use "sass:color";` **at the top of every SCSS file (partial or entry) that uses `color.adjust` or `color.scale`**. The new Sass module system does NOT share @use between files.
+- **Use** `color.adjust()` or `color.scale()` from the new Sass color module for all color manipulations.
+- Example:
+  ```scss
+  @use "sass:color";
+  // Instead of:
+  color: darken($primary, 10%);
+  // Use:
+  color: color.adjust($primary, $lightness: -10%);
+  ```

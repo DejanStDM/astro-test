@@ -4,11 +4,12 @@
 
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "sass:color";
 
 // Page section wrapper styles
 .page-sec--hero-section {
   position: relative;
-  height: 100vh;
+
   min-height: 900px;
   display: flex;
   align-items: center;
@@ -36,7 +37,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://cdn.builder.io/api/v1/image/assets%2F9cbbb97b27784086a538ac468ac265d8%2F156fc0add54545d38742f2e3a8a06718?format=webp&width=800') center/cover no-repeat;
+    object-fit: cover;
+    object-position: center;
     opacity: 0.8;
   }
 
@@ -68,7 +70,6 @@
 // Hero section component styles
 .hero-section {
   width: 100%;
-  max-width: 1200px;
 
   &__content {
     display: flex;
@@ -84,7 +85,6 @@
 
   &__title {
     color: $white;
-    max-width: 1000px;
     margin: 0;
 
     @include mobile {
@@ -93,7 +93,8 @@
   }
 
   &__title-highlight {
-    color: $primary-600;
+    // color: $primary-600;
+    display: block;
   }
 
   &__actions {
@@ -134,9 +135,9 @@
     }
 
     &:active {
-      background-color: darken($white, 10%);
+      background-color: color.adjust($white, $lightness: -10%);
       color: $primary-900;
-      border-color: darken($white, 10%);
+      border-color: color.adjust($white, $lightness: -10%);
     }
   }
 }

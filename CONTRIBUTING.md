@@ -12,7 +12,7 @@ Files located in the `pages/` directory are based on specific Figma designs and 
 
 ## Creating a New Section
 
-This guide uses the "Generic Section" as an example. When creating a new section, replace `[section-name]` with a descriptive name for your component (e.g., `about-section`, `team-members`).
+This guide uses the "Generic Section" as an example. When creating a new section, replace `[name]` with a descriptive name for your component (e.g., `about-section`, `team-members`).
 
 ### 1. HTML Structure
 
@@ -21,14 +21,14 @@ All new sections should follow a consistent HTML structure based on BEM (Block, 
 **Example Structure:**
 
 ```html
-<section class="page-sec page-sec--[section-name]">
+<section class="page-sec page-sec--[name]">
     <div class="container">
-        <div class="[section-name]">
-            <div class="[section-name]__header">
-                <h2 class="heading-h2 [section-name]__title">Section Title</h2>
-                <h3 class="heading-h3 [section-name]__subtitle">Section Subtitle</h3>
+        <div class="[name]">
+            <div class="[name]__header">
+                <h2 class="heading-h2 [name]__title">Section Title</h2>
+                <h3 class="heading-h3 [name]__subtitle">Section Subtitle</h3>
             </div>
-            <div class="[section-name]__content">
+            <div class="[name]__content">
                 <!-- Your content goes here -->
                 <h2>Content Title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
@@ -41,27 +41,27 @@ All new sections should follow a consistent HTML structure based on BEM (Block, 
 **Key Classes:**
 
 *   **`page-sec`**: The base class for all page sections.
-*   **`page-sec--[section-name]`**: A modifier class to apply specific top-level styles to this section type.
+*   **`page-sec--[name]`**: A modifier class to apply specific top-level styles to this section type.
 *   **`container`**: A wrapper to constrain the content width.
-*   **`[section-name]`**: The main block/component class for your section. All element classes within the section should be prefixed with this name.
-*   **`[section-name]__element`**: BEM-style classes for elements within the section (e.g., `__title`, `__header`, `__content`).
+*   **`[name]`**: The main block/component class for your section. All element classes within the section should be prefixed with this name.
+*   **`[name]__element`**: BEM-style classes for elements within the section (e.g., `__title`, `__header`, `__content`).
 
 ### 2. SCSS Styling
 
 Create a new SCSS partial for your section in the `src/scss/components/` directory.
 
-1.  **File Name:** Name the file `_[section-name].scss`.
+1.  **File Name:** Name the file `_[name].scss`.
 2.  **Content:** Use the BEM naming convention to style your components.
 
-**Example `_team-section.scss`:**
+**Example `_team.scss`:**
 
 ```scss
 // src/scss/components/_team-section.scss
-.page-sec--team-section{
+.page-sec--team{
     // if section wrapper need styling
     background-color: white;
 }
-.team-section {
+.team {
     // Block styles
 
     &__header {
