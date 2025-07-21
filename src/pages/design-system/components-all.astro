@@ -2,6 +2,7 @@
 import DevLayout from '../../layouts/DevLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Services from '../../components/Services.astro';
+import SelectedWork from '../../components/SelectedWork.astro';
 ---
 <DevLayout>
 
@@ -23,4 +24,13 @@ import Services from '../../components/Services.astro';
         </div>
     </div>
     <Services />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 style="margin-top: 4rem;">Selected Work</h2>
+            </div>
+        </div>
+    </div>
+    <SelectedWork />
 </DevLayout>
