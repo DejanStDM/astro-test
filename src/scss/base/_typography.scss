@@ -272,45 +272,6 @@ p {
 }
 
 // ==========================================================================
-// Section Heading Styles
-// ==========================================================================
-
-// Section Heading (styled as H1 semi-bold from Figma)
-.section-heading {
-  @include heading-h1($weight-semi-bold);
-}
-
-// Section Pre-title
-.section-pretitle {
-  color: $primary-500;
-  margin-bottom: 1.25rem;
-  @include heading-h3($weight-bold);
-}
-
-// Section Post-title
-.section-posttitle {
-  margin-top: 1rem;
-  @include paragraph-p1($weight-regular);
-}
-
-// Section Header Container
-.section-header {
-  margin-bottom: 6.25rem; // 100px
-
-  &--center {
-    text-align: center;
-  }
-
-  &--left {
-    text-align: left;
-  }
-
-  @include mobile {
-    margin-bottom: 4rem; // 64px on mobile
-  }
-}
-
-// ==========================================================================
 // Utility Classes
 // ==========================================================================
 
