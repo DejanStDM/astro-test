@@ -1,0 +1,175 @@
+---
+// Container showcase page for design system
+import DesignLayout from '../../layouts/DesignLayout.astro';
+---
+
+<DesignLayout title="Container - Design System">
+  <div class="design-system-page">
+    <header class="design-system-header">
+      <h1 class="display-d1">Container System</h1>
+      <p class="body-lg">Bootstrap-like responsive container component for consistent layout structure.</p>
+    </header>
+
+    <!-- Container Demo -->
+    <section class="design-system-section">
+      <h2 class="display-d2">Container Component</h2>
+      <p class="body-md">The container provides consistent max-widths and padding across all breakpoints.</p>
+      
+      <!-- Visual Demo -->
+      <div class="container-demo">
+        <div class="container">
+          <div class="container-content">
+            <h3 class="display-d3">Standard Container</h3>
+            <p class="body-md">
+              This container adapts to different screen sizes:
+            </p>
+            <ul class="body-md">
+              <li><strong>Mobile:</strong> Full width with 20px padding</li>
+              <li><strong>Tablet (768px+):</strong> Max-width 705px</li>
+              <li><strong>Desktop (992px+):</strong> Max-width 1120px</li>
+              <li><strong>Large (1400px+):</strong> Max-width 1640px</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container Fluid Demo -->
+      <div class="container-demo">
+        <div class="container-fluid">
+          <div class="container-content">
+            <h3 class="display-d3">Container Fluid</h3>
+            <p class="body-md">
+              Container fluid spans full width at all breakpoints but maintains consistent padding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Examples -->
+    <section class="design-system-section">
+      <h2 class="display-d2">Usage Examples</h2>
+      
+      <div class="code-example">
+        <h3 class="display-d3">Standard Container</h3>
+        <pre><code>&lt;div class="container"&gt;
+  &lt;!-- Your content here --&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <div class="code-example">
+        <h3 class="display-d3">Container Fluid</h3>
+        <pre><code>&lt;div class="container-fluid"&gt;
+  &lt;!-- Your content here --&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Specifications -->
+    <section class="design-system-section">
+      <h2 class="display-d2">Specifications</h2>
+      
+      <div class="specs-grid">
+        <div class="spec-item">
+          <h4 class="heading-h4">Padding</h4>
+          <p class="body-md">20px left and right on all breakpoints</p>
+        </div>
+        
+        <div class="spec-item">
+          <h4 class="heading-h4">Mobile (0-767px)</h4>
+          <p class="body-md">Full width container</p>
+        </div>
+        
+        <div class="spec-item">
+          <h4 class="heading-h4">Tablet (768px+)</h4>
+          <p class="body-md">Max-width: 705px</p>
+        </div>
+        
+        <div class="spec-item">
+          <h4 class="heading-h4">Desktop (992px+)</h4>
+          <p class="body-md">Max-width: 1120px</p>
+        </div>
+        
+        <div class="spec-item">
+          <h4 class="heading-h4">Large (1400px+)</h4>
+          <p class="body-md">Max-width: 1640px</p>
+        </div>
+        
+        <div class="spec-item">
+          <h4 class="heading-h4">Alignment</h4>
+          <p class="body-md">Center aligned with auto margins</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</DesignLayout>
+
+<style lang="scss">
+@use "../../scss/utils/variables" as *;
+@use "../../scss/utils/mixins" as *;
+
+.container-demo {
+  margin: 32px 0;
+  
+  .container-content {
+    background-color: $neutral-50;
+    border: 2px dashed $neutral-200;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    
+    ul {
+      text-align: left;
+      max-width: 400px;
+      margin: 16px auto 0;
+    }
+  }
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.spec-item {
+  padding: 20px;
+  background-color: $neutral-50;
+  border-radius: 8px;
+  border: 1px solid $neutral-200;
+  
+  h4 {
+    margin: 0 0 8px 0;
+    color: $primary-900;
+  }
+  
+  p {
+    margin: 0;
+    color: $neutral-700;
+  }
+}
+
+.code-example {
+  margin: 24px 0;
+  
+  h3 {
+    margin-bottom: 12px;
+  }
+  
+  pre {
+    background-color: $neutral-800;
+    color: $white;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0;
+    
+    code {
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+</style>
