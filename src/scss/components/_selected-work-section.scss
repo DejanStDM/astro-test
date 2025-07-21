@@ -1,0 +1,209 @@
+// ==========================================================================
+// Selected Work Section Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// ==========================================================================
+// Selected Work Section
+// ==========================================================================
+
+.selected-work-section {
+  // Inherits default section styling from layout/section.scss
+  // Background and padding handled by .section--dark class
+}
+
+// ==========================================================================
+// Selected Work Header
+// ==========================================================================
+
+.selected-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  &__content {
+    flex: 1;
+  }
+}
+
+// ==========================================================================
+// Selected Work Grid
+// ==========================================================================
+
+.selected-work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem; // 60px between rows
+  
+  @include mobile {
+    gap: 2.5rem; // 40px on mobile
+  }
+}
+
+.selected-work-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.75rem; // 60px
+  
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include mobile {
+    gap: 2.5rem; // 40px on mobile
+  }
+}
+
+// ==========================================================================
+// Work Item
+// ==========================================================================
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // 16px
+  padding-bottom: 1rem; // 16px
+  border-bottom: 1px solid #004B49; // Primary-800
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    
+    .work-item__image img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// ==========================================================================
+// Work Item Image
+// ==========================================================================
+
+.work-item__image {
+  width: 100%;
+  aspect-ratio: 16 / 10; // Maintain consistent aspect ratio
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: $neutral-200;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
+// ==========================================================================
+// Work Item Content
+// ==========================================================================
+
+.work-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; // 20px
+  
+  @include mobile {
+    gap: 1rem; // 16px on mobile
+  }
+}
+
+.work-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+}
+
+.work-item__title {
+  color: $white;
+  margin: 0;
+  @include heading-h3($weight-semi-bold);
+  
+  @include md {
+    font-size: 2.25rem; // 36px
+    line-height: 2.9375rem; // 47px
+    letter-spacing: -0.045rem; // -0.72px
+  }
+}
+
+.work-item__description {
+  color: $white;
+  margin: 0;
+  @include paragraph-p3($weight-regular);
+  
+  @include md {
+    font-size: 1.125rem; // 18px
+    line-height: 1.4375rem; // 23px
+    letter-spacing: -0.0225rem; // -0.36px
+  }
+}
+
+// ==========================================================================
+// Responsive Adjustments
+// ==========================================================================
+
+@include mobile {
+  .selected-work-header {
+    .btn {
+      align-self: flex-start;
+      width: auto;
+    }
+  }
+  
+  .work-item__header {
+    .tag-group {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// ==========================================================================
+// Animation and Interaction
+// ==========================================================================
+
+.work-item {
+  &:hover {
+    .work-item__title {
+      color: $primary-500;
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+// Enhanced image hover effect
+.work-item__image {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(51, 184, 169, 0.1), rgba(0, 100, 88, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+  }
+  
+  .work-item:hover &::after {
+    opacity: 1;
+  }
+}
