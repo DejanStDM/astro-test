@@ -1,0 +1,148 @@
+---
+import DevLayout from '../../layouts/DevLayout.astro';
+---
+<DevLayout>
+  <div class="container" style="padding: 4rem 2rem;">
+    <h1 style="margin-bottom: 2rem; color: #000E24;">Tags Component</h1>
+    <p style="color: #546286; line-height: 1.6; margin-bottom: 3rem;">
+      Tags are small, interactive labels used to categorize content, filter items, or indicate status. 
+      They support multiple variants, sizes, and states for flexible usage across the design system.
+    </p>
+
+    <!-- Default Tags -->
+    <section style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Default Tags</h2>
+      <div class="tag-group" style="margin-bottom: 1rem;">
+        <span class="tag">Brand Identity</span>
+        <span class="tag">Web Design</span>
+        <span class="tag">Development</span>
+        <span class="tag">Graphic Design</span>
+      </div>
+      <code style="background: #F5F6F9; padding: 0.5rem; border-radius: 4px; display: block; margin-bottom: 1rem;">
+        &lt;span class="tag"&gt;Brand Identity&lt;/span&gt;
+      </code>
+    </section>
+
+    <!-- Color Variants -->
+    <section style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Color Variants</h2>
+      <div class="tag-group" style="margin-bottom: 1rem;">
+        <span class="tag tag--primary">Primary</span>
+        <span class="tag tag--secondary">Secondary</span>
+        <span class="tag tag--light">Light</span>
+        <span class="tag tag--dark">Dark</span>
+        <span class="tag tag--outline">Outline</span>
+      </div>
+      <code style="background: #F5F6F9; padding: 0.5rem; border-radius: 4px; display: block; margin-bottom: 1rem;">
+        &lt;span class="tag tag--primary"&gt;Primary&lt;/span&gt;<br>
+        &lt;span class="tag tag--outline"&gt;Outline&lt;/span&gt;
+      </code>
+    </section>
+
+    <!-- Size Variants -->
+    <section style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Size Variants</h2>
+      <div class="tag-group" style="margin-bottom: 1rem; align-items: center;">
+        <span class="tag tag--small">Small</span>
+        <span class="tag">Default</span>
+        <span class="tag tag--large">Large</span>
+      </div>
+      <code style="background: #F5F6F9; padding: 0.5rem; border-radius: 4px; display: block; margin-bottom: 1rem;">
+        &lt;span class="tag tag--small"&gt;Small&lt;/span&gt;<br>
+        &lt;span class="tag tag--large"&gt;Large&lt;/span&gt;
+      </code>
+    </section>
+
+    <!-- States -->
+    <section style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">States</h2>
+      <div class="tag-group" style="margin-bottom: 1rem;">
+        <span class="tag">Normal</span>
+        <span class="tag tag--active">Active</span>
+        <span class="tag tag--disabled">Disabled</span>
+      </div>
+      <code style="background: #F5F6F9; padding: 0.5rem; border-radius: 4px; display: block; margin-bottom: 1rem;">
+        &lt;span class="tag tag--active"&gt;Active&lt;/span&gt;<br>
+        &lt;span class="tag tag--disabled"&gt;Disabled&lt;/span&gt;
+      </code>
+    </section>
+
+    <!-- Tag Groups -->
+    <section style="margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Tag Groups</h2>
+      <div style="margin-bottom: 1rem;">
+        <h3 style="margin-bottom: 0.5rem; color: #000E24; font-size: 1.1rem;">Default Spacing</h3>
+        <div class="tag-group">
+          <span class="tag">React</span>
+          <span class="tag">Vue</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Svelte</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <h3 style="margin-bottom: 0.5rem; color: #000E24; font-size: 1.1rem;">Small Spacing</h3>
+        <div class="tag-group tag-group--small">
+          <span class="tag tag--small">HTML</span>
+          <span class="tag tag--small">CSS</span>
+          <span class="tag tag--small">JavaScript</span>
+          <span class="tag tag--small">TypeScript</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <h3 style="margin-bottom: 0.5rem; color: #000E24; font-size: 1.1rem;">Compact Spacing</h3>
+        <div class="tag-group tag-group--compact">
+          <span class="tag tag--outline">Design</span>
+          <span class="tag tag--outline">Development</span>
+          <span class="tag tag--outline">Testing</span>
+        </div>
+      </div>
+      <code style="background: #F5F6F9; padding: 0.5rem; border-radius: 4px; display: block;">
+        &lt;div class="tag-group"&gt;<br>
+        &nbsp;&nbsp;&lt;span class="tag"&gt;React&lt;/span&gt;<br>
+        &nbsp;&nbsp;&lt;span class="tag"&gt;Vue&lt;/span&gt;<br>
+        &lt;/div&gt;
+      </code>
+    </section>
+
+    <!-- Dark Background Example -->
+    <section style="background: #001412; padding: 2rem; border-radius: 8px; margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 1rem; color: #fff;">Tags on Dark Background</h2>
+      <p style="color: #fff; margin-bottom: 1rem;">
+        Tags are designed to work well on dark backgrounds, as seen in the Selected Work section:
+      </p>
+      <div class="tag-group">
+        <span class="tag">Brand Identity</span>
+        <span class="tag">Web Design</span>
+        <span class="tag">Development</span>
+        <span class="tag tag--secondary">Graphic Design</span>
+      </div>
+    </section>
+
+    <!-- Usage Guidelines -->
+    <section>
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Usage Guidelines</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div>
+          <h3 style="margin-bottom: 0.5rem; color: #000E24;">Do</h3>
+          <ul style="color: #546286; line-height: 1.6;">
+            <li>Use tags to categorize and filter content</li>
+            <li>Keep tag text concise and descriptive</li>
+            <li>Use consistent color variants for similar content types</li>
+            <li>Group related tags together</li>
+            <li>Use hover states for interactive tags</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 0.5rem; color: #000E24;">Don't</h3>
+          <ul style="color: #546286; line-height: 1.6;">
+            <li>Use too many different colors in one group</li>
+            <li>Make tag text too long or verbose</li>
+            <li>Use tags as primary navigation elements</li>
+            <li>Overuse tags - keep them meaningful</li>
+            <li>Mix different sizes unnecessarily</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</DevLayout>

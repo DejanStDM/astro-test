@@ -1,0 +1,164 @@
+// ==========================================================================
+// Tags Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// ==========================================================================
+// Base Tag Styling
+// ==========================================================================
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem; // 4px 12px
+  border-radius: 100px;
+  font-family: $font-secondary;
+  font-size: 0.875rem; // 14px
+  font-weight: $weight-bold;
+  line-height: 1.357; // 19px
+  letter-spacing: -0.01rem; // -0.28px
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  // Default variant - Primary
+  background-color: #006458; // Primary-700 from Figma
+  color: $white;
+  
+  &:hover {
+    background-color: $primary-500; // Lighter on hover
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 100, 88, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 100, 88, 0.3);
+  }
+}
+
+// ==========================================================================
+// Tag Color Variants
+// ==========================================================================
+
+.tag {
+  // Primary variant (default)
+  &--primary {
+    background-color: #006458;
+    color: $white;
+    
+    &:hover {
+      background-color: $primary-500;
+    }
+  }
+  
+  // Secondary variant
+  &--secondary {
+    background-color: #004B49; // Primary-800
+    color: $white;
+    
+    &:hover {
+      background-color: #006458;
+    }
+  }
+  
+  // Light variant
+  &--light {
+    background-color: $neutral-200;
+    color: $primary-text-black;
+    
+    &:hover {
+      background-color: $neutral-500;
+      color: $white;
+    }
+  }
+  
+  // Dark variant
+  &--dark {
+    background-color: $neutral-800;
+    color: $white;
+    
+    &:hover {
+      background-color: $neutral-700;
+    }
+  }
+  
+  // Outline variant
+  &--outline {
+    background-color: transparent;
+    color: $primary-500;
+    border: 1px solid $primary-500;
+    
+    &:hover {
+      background-color: $primary-500;
+      color: $white;
+    }
+  }
+}
+
+// ==========================================================================
+// Tag Size Variants
+// ==========================================================================
+
+.tag {
+  // Small variant
+  &--small {
+    padding: 0.125rem 0.5rem; // 2px 8px
+    font-size: 0.75rem; // 12px
+    line-height: 1.33; // 16px
+  }
+  
+  // Large variant  
+  &--large {
+    padding: 0.375rem 1rem; // 6px 16px
+    font-size: 1rem; // 16px
+    line-height: 1.5; // 24px
+  }
+}
+
+// ==========================================================================
+// Tag States
+// ==========================================================================
+
+.tag {
+  &:disabled,
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+      background-color: inherit;
+    }
+  }
+  
+  &--active {
+    background-color: $primary-500;
+    color: $white;
+    box-shadow: 0 2px 8px rgba(51, 184, 169, 0.3);
+  }
+}
+
+// ==========================================================================
+// Tag Group Container
+// ==========================================================================
+
+.tag-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem; // 16px
+  flex-wrap: wrap;
+  
+  &--small {
+    gap: 0.5rem; // 8px
+  }
+  
+  &--compact {
+    gap: 0.25rem; // 4px
+  }
+}

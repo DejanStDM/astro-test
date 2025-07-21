@@ -1,0 +1,156 @@
+// ==========================================================================
+// Section Layout Styles
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// ==========================================================================
+// Default Section Styling
+// ==========================================================================
+
+.section {
+  // Default section spacing
+  padding: 5rem 0; // 80px mobile
+  
+  @include md {
+    padding: 8.75rem 0; // 140px desktop
+  }
+  
+  // Section spacing variants
+  &--small {
+    padding: 3rem 0; // 48px mobile
+    
+    @include md {
+      padding: 5rem 0; // 80px desktop
+    }
+  }
+  
+  &--large {
+    padding: 6rem 0; // 96px mobile
+    
+    @include md {
+      padding: 12rem 0; // 192px desktop
+    }
+  }
+  
+  // Remove top padding for first section
+  &--first {
+    padding-top: 0;
+  }
+  
+  // Remove bottom padding for last section
+  &--last {
+    padding-bottom: 0;
+  }
+}
+
+// ==========================================================================
+// Section Header Styling
+// ==========================================================================
+
+.section-header {
+  margin-bottom: 6.25rem; // 100px desktop
+  
+  @include mobile {
+    margin-bottom: 4rem; // 64px mobile
+  }
+  
+  // Header alignment options
+  &--center {
+    text-align: center;
+  }
+  
+  &--left {
+    text-align: left;
+  }
+  
+  &--right {
+    text-align: right;
+  }
+  
+  // Header spacing variants
+  &--compact {
+    margin-bottom: 3rem; // 48px
+    
+    @include md {
+      margin-bottom: 4rem; // 64px
+    }
+  }
+  
+  &--spacious {
+    margin-bottom: 5rem; // 80px mobile
+    
+    @include md {
+      margin-bottom: 8rem; // 128px desktop
+    }
+  }
+}
+
+// ==========================================================================
+// Section Heading Elements
+// ==========================================================================
+
+// Section Heading (styled as H1 semi-bold from Figma)
+.section-heading {
+  margin: 0;
+  @include heading-h1($weight-semi-bold);
+}
+
+// Section Pre-title
+.section-pretitle {
+  color: $primary-500;
+  margin: 0 0 1.25rem 0; // 20px bottom margin
+  @include heading-h3($weight-bold);
+}
+
+// Section Post-title
+.section-posttitle {
+  margin: 1rem 0 0 0; // 16px top margin
+  @include paragraph-p1($weight-regular);
+}
+
+// ==========================================================================
+// Section Container
+// ==========================================================================
+
+.section-container {
+  max-width: 90rem; // 1440px
+  @include container();
+}
+
+// ==========================================================================
+// Section Background Variants
+// ==========================================================================
+
+.section {
+  &--dark {
+    background-color: $shades-black;
+    color: $white;
+  }
+  
+  &--light {
+    background-color: $white;
+    color: $primary-text-black;
+  }
+  
+  &--primary {
+    background-color: $primary-500;
+    color: $white;
+  }
+}
+
+// ==========================================================================
+// Section Spacing Between Sections
+// ==========================================================================
+
+// Remove margin between adjacent sections
+.section + .section {
+  margin-top: 0;
+}
+
+// Add specific spacing between different section types
+.section--light + .section--dark,
+.section--dark + .section--light {
+  // No additional spacing needed, handled by section padding
+}

@@ -1,0 +1,70 @@
+---
+import DevLayout from '../../layouts/DevLayout.astro';
+import SelectedWorkComponent from '../../components/SelectedWork.astro';
+---
+<DevLayout>
+  <SelectedWorkComponent />
+  
+  <!-- Additional content to test and document the Selected Work component -->
+  <section style="padding: 4rem 2rem; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Selected Work Component Documentation</h2>
+      <p style="color: #546286; line-height: 1.6;">
+        This page demonstrates the Selected Work component. The section above showcases our featured projects
+        in a responsive grid layout with project images, titles, tags, and descriptions.
+      </p>
+      
+      <div style="margin-top: 2rem; padding: 2rem; background: #F5F6F9; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Selected Work Component Features:</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #546286;">
+          <li>Dark background theme with header and "View All" button</li>
+          <li>Responsive grid layout (1 column mobile, 2 columns desktop)</li>
+          <li>Four featured work items with project images</li>
+          <li>Global tag system for categorizing projects</li>
+          <li>Hover effects on work items and images</li>
+          <li>Uses existing design system typography and spacing</li>
+          <li>Section header using layout section classes</li>
+          <li>Images sourced from public/images directory</li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 2rem; background: #001412; border-radius: 8px; color: #fff;">
+        <h3 style="margin-bottom: 1rem; color: #33B8A9;">Featured Projects:</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: left;">
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">XoolTech</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Brand Identity, Web Design</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">Flinkerk</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Web Design</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">Alberto Maya</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Design, Web Development</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">Flickerd</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Graphic Design</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 2rem; background: #006458; border-radius: 8px; color: #fff;">
+        <h3 style="margin-bottom: 1rem; color: #fff;">Global Tag System:</h3>
+        <p style="margin-bottom: 1rem; text-align: left;">
+          The tag component is designed to be reusable across the entire website. Available variants include:
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;">
+          <span style="background: #006458; color: white; padding: 4px 12px; border-radius: 100px; font-size: 14px; font-weight: bold; text-transform: uppercase;">Primary</span>
+          <span style="background: #004B49; color: white; padding: 4px 12px; border-radius: 100px; font-size: 14px; font-weight: bold; text-transform: uppercase;">Secondary</span>
+          <span style="background: #D7DBE6; color: #343434; padding: 4px 12px; border-radius: 100px; font-size: 14px; font-weight: bold; text-transform: uppercase;">Light</span>
+          <span style="background: transparent; color: #33B8A9; padding: 3px 11px; border: 1px solid #33B8A9; border-radius: 100px; font-size: 14px; font-weight: bold; text-transform: uppercase;">Outline</span>
+        </div>
+        <p style="font-size: 0.9rem; text-align: left;">
+          Tags include hover states, size variants (small, default, large), and can be disabled or marked as active.
+        </p>
+      </div>
+    </div>
+  </section>
+</DevLayout>
