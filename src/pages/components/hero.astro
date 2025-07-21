@@ -1,0 +1,31 @@
+---
+import DevLayout from '../../layouts/DevLayout.astro';
+import Hero from '../../components/Hero.astro';
+---
+<DevLayout>
+  <Hero />
+  
+  <!-- Additional content to test scroll -->
+  <section style="padding: 4rem 2rem; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Hero Component Test</h2>
+      <p style="color: #546286; line-height: 1.6;">
+        This page demonstrates the Hero component. The hero section above should be full viewport height
+        with the background image, gradient overlay, and centered content with title and buttons.
+      </p>
+      
+      <div style="margin-top: 2rem; padding: 2rem; background: #F5F6F9; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Hero Component Features:</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #546286;">
+          <li>Full viewport height with minimum 900px on desktop</li>
+          <li>Responsive design that works on mobile, tablet, and desktop</li>
+          <li>Background image with gradient overlay</li>
+          <li>Centered content with large display typography</li>
+          <li>Two action buttons using existing button system</li>
+          <li>Teal accent color for highlighted text</li>
+          <li>Dark theme button adaptations for visibility on dark background</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</DevLayout>
