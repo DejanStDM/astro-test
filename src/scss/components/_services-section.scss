@@ -113,11 +113,4 @@
   }
 }
 
-// ==========================================================================
-// Container Override for Services
-// ==========================================================================
-
-.services-section .container {
-  @include container();
-  max-width: 90rem; // 1440px
-}
+// Container styling handled by .section-container class from layout/section.scss
