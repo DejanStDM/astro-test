@@ -76,8 +76,8 @@
   color: $primary-900;
 
   @include md {
-    font-size: 120px;
-    line-height: 126px;
+    font-size: 100px;
+    line-height: normal;
   }
 }
 
@@ -86,13 +86,14 @@
   font-family: $font-primary;
   font-weight: $weight;
   font-size: 36px;
-  line-height: 44px;
+  line-height: 47px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 72px;
     line-height: 94px;
+    letter-spacing: -1.44px;
   }
 }
 
@@ -101,13 +102,14 @@
   font-family: $font-primary;
   font-weight: $weight;
   font-size: 32px;
-  line-height: 40px;
+  line-height: 42px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 64px;
     line-height: 83px;
+    letter-spacing: -1.28px;
   }
 }
 
@@ -115,14 +117,15 @@
 @mixin heading-h1-small($weight: $weight-regular) {
   font-family: $font-primary;
   font-weight: $weight;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 27px;
+  line-height: 35px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 54px;
     line-height: 70px;
+    letter-spacing: -1.08px;
   }
 }
 
@@ -131,13 +134,14 @@
   font-family: $font-primary;
   font-weight: $weight;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 31px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 48px;
     line-height: 62px;
+    letter-spacing: -0.96px;
   }
 }
 
@@ -145,14 +149,15 @@
 @mixin heading-h2-medium($weight: $weight-regular) {
   font-family: $font-primary;
   font-weight: $weight;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 31px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 40px;
     line-height: 52px;
+    letter-spacing: -0.8px;
   }
 }
 
@@ -160,14 +165,15 @@
 @mixin heading-h2-small($weight: $weight-regular) {
   font-family: $font-primary;
   font-weight: $weight;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 24px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 36px;
     line-height: 47px;
+    letter-spacing: -0.72px;
   }
 }
 
@@ -175,14 +181,15 @@
 @mixin heading-h3($weight: $weight-regular) {
   font-family: $font-primary;
   font-weight: $weight;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 21px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 32px;
     line-height: 42px;
+    letter-spacing: -0.64px;
   }
 }
 
@@ -190,14 +197,15 @@
 @mixin heading-h3-small($weight: $weight-regular) {
   font-family: $font-primary;
   font-weight: $weight;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 28px;
     line-height: 36px;
+    letter-spacing: -0.56px;
   }
 }
 
@@ -206,13 +214,14 @@
   font-family: $font-primary;
   font-weight: $weight;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
   letter-spacing: -0.02em;
   color: $primary-900;
 
   @include md {
     font-size: 24px;
     line-height: 31px;
+    letter-spacing: -0.48px;
   }
 }
 
