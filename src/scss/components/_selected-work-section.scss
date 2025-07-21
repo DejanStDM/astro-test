@@ -93,13 +93,55 @@
   aspect-ratio: 16 / 10; // Maintain consistent aspect ratio
   overflow: hidden;
   background-color: $neutral-200;
-  
+  position: relative;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
+}
+
+.work-item__image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.work-item__image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 100, 88, 0.8); // Semi-transparent primary color
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.work-item__view-text {
+  width: 80px;
+  height: 80px;
+  background-color: $primary-500; // #33B8A9
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-family: $font-secondary;
+  font-size: 1rem; // 16px
+  font-weight: $weight-bold;
+  text-transform: capitalize;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
 }
 
 // ==========================================================================
@@ -186,23 +228,16 @@
 }
 
 // Enhanced image hover effect
-.work-item__image {
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(51, 184, 169, 0.1), rgba(0, 100, 88, 0.1));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: inherit;
-  }
-  
-  .work-item:hover &::after {
+.work-item:hover {
+  .work-item__image-overlay {
     opacity: 1;
+  }
+
+  .work-item__view-text {
+    transform: scale(1);
+  }
+
+  .work-item__image img {
+    transform: scale(1.05);
   }
 }
