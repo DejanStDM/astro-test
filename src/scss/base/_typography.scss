@@ -441,22 +441,3 @@ p {
     @include paragraph-p5($weight-bold);
   }
 }
-
-// ==========================================================================
-// Responsive Typography Utilities
-// ==========================================================================
-
-.text-responsive {
-  font-size: 0.9em;
-  line-height: 1.4;
-
-  @include md {
-    font-size: 1em;
-    line-height: 1.5;
-  }
-
-  @include lg {
-    font-size: 1.1em;
-    line-height: 1.6;
-  }
-}

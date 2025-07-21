@@ -1,0 +1,251 @@
+---
+import DevLayout from '../../layouts/DevLayout.astro';
+---
+<DevLayout>
+
+    <!-- NAV_PLACEHOLDER -->
+    <div class="typography-showcase">
+      <!-- Header Section -->
+      <header class="typography-showcase__header">
+        <div class="typography-showcase__header-content">
+          <div class="typography-showcase__icon">
+            <svg
+              width="100"
+              height="172"
+              viewBox="0 0 100 172"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M97.0703 56.6885C98.6883 56.6885 100 55.3768 100 53.7588V38.9297C100 37.3117 98.6883 36 97.0703 36H82.2412C80.6232 36 79.3115 37.3117 79.3115 38.9297V43.4145H20.6885V38.9297C20.6885 37.3117 19.3768 36 17.7588 36H2.92969C1.31172 36 0 37.3117 0 38.9297V53.7588C0 55.3768 1.31172 56.6885 2.92969 56.6885H7.41445V115.312H2.92969C1.31172 115.312 0 116.623 0 118.241V133.07C0 134.688 1.31172 136 2.92969 136H17.7588C19.3768 136 20.6885 134.688 20.6885 133.07V128.586H79.3115V133.07C79.3115 134.688 80.6232 136 82.2412 136H97.0703C98.6883 136 100 134.688 100 133.07V118.241C100 116.623 98.6883 115.312 97.0703 115.312H92.5855V56.6885H97.0703ZM85.1709 41.8594H94.1406V50.8291H85.1709V41.8594ZM5.85938 41.8594H14.8291V50.8291H5.85938V41.8594ZM14.8291 130.141H5.85938V121.171H14.8291V130.141ZM94.1406 130.141H85.1709V121.171H94.1406V130.141ZM86.7262 115.312H82.2414C80.6234 115.312 79.3117 116.623 79.3117 118.241V122.726H20.6887V118.241C20.6887 116.623 19.377 115.312 17.759 115.312H13.2738V56.6885H17.7586C19.3766 56.6885 20.6883 55.3768 20.6883 53.7588V49.2738H79.3113V53.7586C79.3113 55.3766 80.623 56.6883 82.241 56.6883H86.7258V115.312H86.7262Z"
+                fill="#343434"
+              />
+              <path
+                d="M70.9956 62.7894H29.0042C27.3862 62.7894 26.0745 64.1011 26.0745 65.7191V76.3722C26.0745 77.9902 27.3862 79.3019 29.0042 79.3019C30.6221 79.3019 31.9338 77.9902 31.9338 76.3722V68.6488H47.0702V103.742H41.611C39.993 103.742 38.6813 105.053 38.6813 106.671C38.6813 108.289 39.993 109.601 41.611 109.601H58.3885C60.0065 109.601 61.3182 108.289 61.3182 106.671C61.3182 105.053 60.0065 103.742 58.3885 103.742H52.9295V68.6488H68.0659V76.3722C68.0659 77.9902 69.3776 79.3019 70.9956 79.3019C72.6135 79.3019 73.9252 77.9902 73.9252 76.3722V65.7191C73.9252 64.1011 72.6135 62.7894 70.9956 62.7894Z"
+                fill="#343434"
+              />
+            </svg>
+          </div>
+          <div class="typography-showcase__header-text">
+            <h1 class="typography-showcase__title">Typography - Mobile & Desktop</h1>
+            <p class="typography-showcase__description">
+              A comparison showing how typography scales from mobile to desktop. 
+              Mobile sizes ensure readability with minimum 14px, while desktop provides the full hierarchy.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="typography-showcase__main">
+        <!-- Mobile vs Desktop Comparison -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+          <div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: #000E24;">Mobile Sizes (Min 14px)</h2>
+            <div style="max-width: 375px; border: 1px solid #D7DBE6; padding: 1rem; background: #F5F6F9;">
+              
+              <!-- Mobile Display D1 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Display D1 - 48px</p>
+                <div style="font-family: Outfit; font-size: 48px; line-height: 1.17; letter-spacing: -0.02em; color: #000E24;">Display D1</div>
+              </div>
+
+              <!-- Mobile Display D2 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Display D2 - 36px</p>
+                <div style="font-family: Outfit; font-size: 36px; line-height: 1.31; letter-spacing: -0.02em; color: #000E24;">Display D2</div>
+              </div>
+
+              <!-- Mobile H1 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H1 - 32px</p>
+                <div style="font-family: Outfit; font-size: 32px; line-height: 1.31; letter-spacing: -0.02em; color: #000E24;">Heading H1</div>
+              </div>
+
+              <!-- Mobile H2 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H2 - 24px</p>
+                <div style="font-family: Outfit; font-size: 24px; line-height: 1.29; letter-spacing: -0.02em; color: #000E24;">Heading H2</div>
+              </div>
+
+              <!-- Mobile H3 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H3 - 16px</p>
+                <div style="font-family: Outfit; font-size: 16px; line-height: 1.31; letter-spacing: -0.02em; color: #000E24;">Heading H3</div>
+              </div>
+
+              <!-- Mobile H4 & H5 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H4 & H5 - 14px</p>
+                <div style="font-family: Outfit; font-size: 14px; line-height: 1.29; letter-spacing: -0.02em; color: #000E24;">Heading H4 & H5</div>
+              </div>
+
+              <!-- Mobile Paragraphs -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P1 - 18px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 18px; line-height: 1.28; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P2 - 15px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 15px; line-height: 1.33; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+
+              <div>
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraphs P3, P4, P5 - 14px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 14px; line-height: 1.29; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: #000E24;">Desktop Sizes (768px+)</h2>
+            <div style="border: 1px solid #D7DBE6; padding: 1rem; background: #F5F6F9;">
+              
+              <!-- Desktop Display D1 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Display D1 - 100px</p>
+                <div style="font-family: Outfit; font-size: 100px; line-height: normal; letter-spacing: -0.02em; color: #000E24;">Display D1</div>
+              </div>
+
+              <!-- Desktop Display D2 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Display D2 - 72px</p>
+                <div style="font-family: Outfit; font-size: 72px; line-height: 1.31; letter-spacing: -0.02em; color: #000E24;">Display D2</div>
+              </div>
+
+              <!-- Desktop H1 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H1 - 64px</p>
+                <div style="font-family: Outfit; font-size: 64px; line-height: 1.3; letter-spacing: -0.02em; color: #000E24;">Heading H1</div>
+              </div>
+
+              <!-- Desktop H2 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H2 - 48px</p>
+                <div style="font-family: Outfit; font-size: 48px; line-height: 1.29; letter-spacing: -0.02em; color: #000E24;">Heading H2</div>
+              </div>
+
+              <!-- Desktop H3 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H3 - 32px</p>
+                <div style="font-family: Outfit; font-size: 32px; line-height: 1.31; letter-spacing: -0.02em; color: #000E24;">Heading H3</div>
+              </div>
+
+              <!-- Desktop H4 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H4 - 24px</p>
+                <div style="font-family: Outfit; font-size: 24px; line-height: 1.29; letter-spacing: -0.02em; color: #000E24;">Heading H4</div>
+              </div>
+
+              <!-- Desktop H5 -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Heading H5 - 20px</p>
+                <div style="font-family: Outfit; font-size: 20px; line-height: 1.3; letter-spacing: -0.02em; color: #000E24;">Heading H5</div>
+              </div>
+
+              <!-- Desktop Paragraphs -->
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P1 - 24px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 24px; line-height: 1.29; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P2 - 20px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 20px; line-height: 1.3; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P3 - 18px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 18px; line-height: 1.28; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P4 - 16px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 16px; line-height: 1.31; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+
+              <div>
+                <p style="font-size: 12px; color: #9CA6C1; margin-bottom: 0.5rem;">Paragraph P5 - 14px</p>
+                <div style="font-family: Supreme, -apple-system, sans-serif; font-size: 14px; line-height: 1.36; letter-spacing: -0.02em; color: #001412;">The quick brown fox jumps over the lazy dog</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Original Responsive Sections Continue Below -->
+        <hr style="margin: 3rem 0; border: none; height: 1px; background: #D7DBE6;">
+        
+        <!-- Note about responsive behavior -->
+        <div style="background: #F5F6F9; padding: 1.5rem; border-radius: 8px; margin-bottom: 3rem;">
+          <h3 style="margin: 0 0 1rem 0; color: #000E24; font-size: 1.25rem;">📱 Responsive Behavior</h3>
+          <p style="margin: 0; color: #546286; line-height: 1.5;">
+            The sections below show live responsive typography that automatically scales based on your screen size. 
+            Resize your browser window to see the typography change from mobile to desktop sizes.
+          </p>
+        </div>
+
+        <!-- Display D1 Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Display Font - D1</h2>
+            <p class="typography-section__meta">
+              Mobile: 48px | Desktop: 100px | Line height: Normal | Tracking: -2%
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <div class="display-d1--regular">Display D1<br />Regular</div>
+            </div>
+            <div class="typography-example">
+              <div class="display-d1--semi-bold">Display D1<br />Semi Bold</div>
+            </div>
+            <div class="typography-example">
+              <div class="display-d1--bold">Display D1<br />Bold</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Display D2 Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Display Font - D2</h2>
+            <p class="typography-section__meta">
+              Mobile: 36px | Desktop: 72px | Line height: 1.31 | Tracking: -2%
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <div class="display-d2--regular">Display D2<br />Regular</div>
+            </div>
+            <div class="typography-example">
+              <div class="display-d2--bold">Display D2<br />Bold</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Continue with other sections... showing mobile/desktop info -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Heading H1</h2>
+            <p class="typography-section__meta">
+              Mobile: 32px | Desktop: 64px | Line height: 1.3 | Tracking: -2%
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <div class="heading-h1--regular">Heading H1<br />Regular</div>
+            </div>
+            <div class="typography-example">
+              <div class="heading-h1--semi-bold">Heading H1<br />Semi Bold</div>
+            </div>
+            <div class="typography-example">
+              <div class="heading-h1--bold">Heading H1<br />Bold</div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+    
+</DevLayout>

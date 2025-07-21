@@ -6,8 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-// Note: Supreme font would need to be added separately if available
-// For now, we'll use Outfit as fallback for Supreme
+// Note: Supreme font is a premium font and not available via Google Fonts
+// The font-family in variables.scss includes Supreme with Outfit as fallback
+// If Supreme font files are available, they can be added here as custom font faces
 
 // ==========================================================================
 // Font Face Declarations
