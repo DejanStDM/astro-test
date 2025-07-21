@@ -1,0 +1,263 @@
+---
+import DevLayout from '../../layouts/DevLayout.astro';
+---
+<DevLayout>
+
+    <!-- NAV_PLACEHOLDER -->
+    <div class="typography-showcase">
+      <!-- Header Section -->
+      <header class="typography-showcase__header">
+        <div class="typography-showcase__header-content">
+          <div class="typography-showcase__icon">
+            <svg
+              width="100"
+              height="172"
+              viewBox="0 0 100 172"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="10" y="30" width="80" height="25" rx="4" fill="#008576"/>
+              <rect x="10" y="65" width="80" height="25" rx="4" fill="none" stroke="#008576" stroke-width="2"/>
+              <rect x="10" y="100" width="60" height="20" fill="none"/>
+              <text x="15" y="115" font-family="Arial" font-size="8" fill="#323B50">Button Text</text>
+              <path d="M75 105L85 115L75 125" stroke="#323B50" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="typography-showcase__header-text">
+            <h1 class="typography-showcase__title">Button Components</h1>
+            <p class="typography-showcase__description">
+              A comprehensive button system with primary, secondary, and text variants. 
+              Designed for accessibility and consistent interaction patterns.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="typography-showcase__main">
+        
+        <!-- Primary Buttons Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Primary Buttons</h2>
+            <p class="typography-section__meta">
+              Used for primary actions like "Request a Project" or "Submit"
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <button class="btn btn-primary">Request a Project</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-primary btn-large">View All Projects</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-primary btn-small">Get Started</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Secondary Buttons Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Secondary Buttons</h2>
+            <p class="typography-section__meta">
+              Used for secondary actions with outline styling
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-secondary btn-large">View Portfolio</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-secondary btn-small">Details</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-secondary" disabled>Disabled</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Text Buttons Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Text Buttons</h2>
+            <p class="typography-section__meta">
+              Used for tertiary actions, often with icons
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <button class="btn btn-text">
+                Read More
+                <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-text">
+                View Details
+                <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-text" disabled>
+                Disabled Link
+                <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Button Groups Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Button Groups</h2>
+            <p class="typography-section__meta">
+              Combinations of buttons for complex actions
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <div class="btn-group">
+                <button class="btn btn-primary">Save Changes</button>
+                <button class="btn btn-secondary">Cancel</button>
+              </div>
+            </div>
+            <div class="typography-example">
+              <div class="btn-group btn-group--stack">
+                <button class="btn btn-primary">Primary Action</button>
+                <button class="btn btn-secondary">Secondary Action</button>
+                <button class="btn btn-text">
+                  Text Action
+                  <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="typography-example">
+              <div class="btn-group btn-group--center">
+                <button class="btn btn-primary btn-small">Yes</button>
+                <button class="btn btn-secondary btn-small">No</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Full Width Buttons Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Full Width Buttons</h2>
+            <p class="typography-section__meta">
+              Buttons that span the full width of their container
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example" style="width: 100%;">
+              <button class="btn btn-primary btn-full">Request a Consultation</button>
+            </div>
+            <div class="typography-example" style="width: 100%;">
+              <button class="btn btn-secondary btn-full">Browse Our Work</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Loading States Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Loading States</h2>
+            <p class="typography-section__meta">
+              Buttons with loading indicators for async actions
+            </p>
+          </div>
+          <div class="typography-section__examples">
+            <div class="typography-example">
+              <button class="btn btn-primary btn-loading">Submitting...</button>
+            </div>
+            <div class="typography-example">
+              <button class="btn btn-secondary btn-loading">Loading...</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Usage Guidelines Section -->
+        <section class="typography-section">
+          <div class="typography-section__header">
+            <h2 class="typography-section__title">Usage Guidelines</h2>
+          </div>
+          <div style="background: #F5F6F9; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="margin: 0 0 1rem 0; color: #000E24; font-size: 1.25rem;">Button Hierarchy</h3>
+            <ul style="margin: 0; color: #546286; line-height: 1.6;">
+              <li><strong>Primary:</strong> Use for the main action on a page (1 per screen recommended)</li>
+              <li><strong>Secondary:</strong> Use for secondary actions that support the primary action</li>
+              <li><strong>Text:</strong> Use for tertiary actions, navigation, or less important actions</li>
+            </ul>
+          </div>
+          
+          <div style="background: #F5F6F9; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="margin: 0 0 1rem 0; color: #000E24; font-size: 1.25rem;">Accessibility Features</h3>
+            <ul style="margin: 0; color: #546286; line-height: 1.6;">
+              <li>Minimum 44px touch target on mobile devices</li>
+              <li>Clear focus indicators for keyboard navigation</li>
+              <li>Disabled states with appropriate opacity</li>
+              <li>Color contrast meets WCAG AA standards</li>
+              <li>Icons include proper semantic meaning</li>
+            </ul>
+          </div>
+
+          <div style="background: #F5F6F9; padding: 2rem; border-radius: 8px;">
+            <h3 style="margin: 0 0 1rem 0; color: #000E24; font-size: 1.25rem;">Implementation</h3>
+            <pre style="background: #fff; padding: 1rem; border-radius: 4px; overflow-x: auto; margin: 0;"><code>&lt;!-- Primary Button --&gt;
+&lt;button class="btn btn-primary"&gt;Request a Project&lt;/button&gt;
+
+&lt;!-- Secondary Button --&gt;
+&lt;button class="btn btn-secondary"&gt;Learn More&lt;/button&gt;
+
+&lt;!-- Text Button with Icon --&gt;
+&lt;button class="btn btn-text"&gt;
+  Read More
+  &lt;svg class="btn__icon"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="typography-showcase__footer">
+        <div class="typography-showcase__footer-content">
+          <div class="typography-showcase__logo">
+            <span style="color: #000E24;">hexw</span><span style="color: #5B47FF;">aa</span><span style="color: #000E24;">ve.com</span>
+          </div>
+          <div class="typography-showcase__footer-links">
+            <a href="#" class="typography-showcase__footer-link">Website</a>
+            <a href="#" class="typography-showcase__footer-link">Instagram</a>
+            <a href="#" class="typography-showcase__footer-link">LinkedIn</a>
+            <a href="#" class="typography-showcase__footer-link">Twitter</a>
+            <a href="#" class="typography-showcase__footer-link">Facebook</a>
+          </div>
+          <div class="typography-showcase__footer-divider"></div>
+          <p class="typography-showcase__footer-copyright">
+            © 2025 Hexwaave. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+    
+</DevLayout>
