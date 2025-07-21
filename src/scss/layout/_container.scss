@@ -14,13 +14,8 @@
   margin-right: auto;
 
   // Responsive max-widths based on your specifications
-  // Small screens - no max-width, just padding
-  @include mobile {
-    max-width: none;
-  }
-
   // Tablet and up - 705px container
-  @include tablet {
+  @media (min-width: $md) {
     max-width: 705px;
   }
 
