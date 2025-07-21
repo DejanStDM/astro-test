@@ -3,19 +3,24 @@
 // ==========================================================================
 
 // Primary Colors
-$primary-500: #5b47ff;
-$primary-900: #000e24;
+$primary-500: #5B47FF;
+$primary-600: #008576;
+$primary-900: #000E24;
 $primary-text-black: #343434;
 
 // Neutral Colors
-$neutral-50: #f5f6f9;
-$neutral-200: #d7dbe6;
-$neutral-500: #9ca6c1;
+$neutral-50: #F5F6F9;
+$neutral-200: #D7DBE6;
+$neutral-500: #9CA6C1;
 $neutral-700: #546286;
+$neutral-800: #323B50;
+$neutral-900: #11141B;
 
 // Shades
-$white: #fff;
-$black: #000e24;
+$white: #FFF;
+$shades-white: #FFF;
+$black: #000E24;
+$shades-black: #001412;
 
 // ==========================================================================
 // Typography
@@ -29,11 +34,11 @@ $font-primary:
   Helvetica,
   sans-serif;
 $font-secondary:
-  "Outfit",
+  "Supreme",
   -apple-system,
   Roboto,
   Helvetica,
-  sans-serif; // Using Outfit as fallback for Supreme
+  sans-serif;
 $font-body:
   "Inter",
   -apple-system,
