@@ -168,13 +168,16 @@ import DevLayout from '../../layouts/DevLayout.astro';
               Buttons that span the full width of their container
             </p>
           </div>
-          <div class="typography-section__examples">
-            <div class="typography-example" style="width: 100%;">
-              <button class="btn btn-primary btn-full">Request a Consultation</button>
-            </div>
-            <div class="typography-example" style="width: 100%;">
-              <button class="btn btn-secondary btn-full">Browse Our Work</button>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+            <button class="btn btn-primary btn-full">Request a Consultation</button>
+            <button class="btn btn-secondary btn-full">Browse Our Work</button>
+            <button class="btn btn-text btn-full">
+              View All Projects
+              <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
         </section>
 
