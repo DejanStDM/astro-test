@@ -1,0 +1,14 @@
+.js__test-js-btn {
+    background-color: #9e69ff; // A nice pink color
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #ff1493; // A darker pink on hover
+    }
+  }

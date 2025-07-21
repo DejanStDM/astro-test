@@ -1,0 +1,236 @@
+# Design System Rules
+
+---
+description: "Rules and guidelines for maintaining the design system, including SCSS organization, BEM methodology, and design system presentation pages."
+globs: ["scss/**/*.scss", "app/design-system/**/*"]
+alwaysApply: true
+---
+
+## SCSS Organization (7-1 Architecture Pattern)
+
+The SCSS files should be organized according to the 7-1 architecture pattern:
+
+1. **base/** - Contains basic styles
+   - `_normalize.scss` - CSS reset/normalize
+   - `_typography.scss` - Typography rules
+   - `_fonts.scss` - Font imports
+   - `_globals.scss` - Global styles
+
+2. **components/** - Contains styles for specific UI components
+   - Each component should have its own file (e.g., `_buttons.scss`, `_cards.scss`)
+   - Follow BEM naming conventions (see below)
+
+3. **layout/** - Contains styles for layout elements
+   - `_grid.scss` - Grid system
+   - `_header.scss` - Header styles
+   - `_footer.scss` - Footer styles
+   - `_sidebar.scss` - Sidebar styles
+
+4. **pages/** - Contains page-specific styles
+   - Each page should have its own file if needed
+
+5. **themes/** - Contains theme-specific styles
+   - Different themes or color schemes
+
+6. **utils/** (or **abstracts/**) - Contains Sass tools and helpers
+   - `_variables.scss` - Sass variables
+   - `_functions.scss` - Sass functions
+   - `_mixins.scss` - Sass mixins
+   - `_placeholders.scss` - Sass placeholders
+
+7. **vendors/** - Contains third-party styles
+   - External libraries and frameworks
+
+All files except main entry points should be prefixed with an underscore (`_`) to indicate they are partials.
+
+## BEM Methodology
+
+Follow the Block-Element-Modifier (BEM) naming convention for CSS classes:
+
+```scss
+/* Block component */
+.card {}
+
+/* Element that depends upon the block */
+.card__title {}
+.card__image {}
+.card__button {}
+
+/* Modifier that changes the style of the block */
+.card--featured {}
+.card__button--primary {}
+```
+
+### Guidelines:
+
+- **Block**: Standalone entity that is meaningful on its own (e.g., `header`, `menu`, `button`)
+- **Element**: Part of a block with no standalone meaning (e.g., `menu__item`, `list__item`)
+- **Modifier**: Flag on a block or element to change appearance or behavior (e.g., `button--large`, `menu--horizontal`)
+
+## SCSS Writing Best Practices
+
+1. **Use variables for consistent values**:
+   ```scss
+   // In _variables.scss
+   $primary-color: #3498db;
+   
+   // In component files
+   .button {
+     background-color: $primary-color;
+   }
+   ```
+
+2. **Use nesting sparingly** (max 3 levels deep):
+   ```scss
+   .card {
+     padding: 1rem;
+     
+     &__title {
+       font-size: 1.5rem;
+       
+       &--large {
+         font-size: 2rem;
+       }
+     }
+   }
+   ```
+
+3. **Use mixins for reusable code blocks**:
+   ```scss
+   @mixin flex-center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .container {
+     @include flex-center;
+   }
+   ```
+
+4. **Use functions for calculations**:
+   ```scss
+   @function rem($pixels) {
+     @return $pixels / 16 * 1rem;
+   }
+   
+   .element {
+     font-size: rem(24);
+   }
+   ```
+
+5. **Comment your code**:
+   ```scss
+   // ==========================================================================
+   // Button Component
+   // ==========================================================================
+   
+   // Primary button styles
+   .button--primary {
+     // ...
+   }
+   ```
+
+## Design System Presentation Pages
+
+Design system presentation pages should be organized in the `app/design-system/` directory:
+
+1. **Typography** - Showcase all text styles
+   - Headings (h1-h6)
+   - Body text
+   - Special text styles
+
+2. **Colors** - Display all color variables
+   - Primary colors
+   - Secondary colors
+   - Neutral colors
+   - Semantic colors (success, error, warning, info)
+
+3. **Buttons** - Show all button variations
+   - Primary, secondary, tertiary buttons
+   - Button sizes
+   - Button states (hover, active, disabled)
+
+4. **Components** - Showcase all UI components
+   - Cards
+   - Forms
+   - Modals
+   - Navigation elements
+
+5. **Layout** - Demonstrate layout systems
+   - Grid system
+   - Spacing system
+
+6. **Icons** - Display all available icons
+
+Each presentation page should:
+- Show the component in all its variations
+- Include code examples
+- Provide usage guidelines
+
+## File Imports
+
+In the main.scss file, import all partials in the correct order:
+
+```scss
+// 1. Configuration and helpers
+@use "utils";
+
+// 2. Vendors
+@use "vendors";
+
+// 3. Base
+@use "base";
+
+// 4. Layout
+@use "layout";
+
+// 5. Components
+@use "components";
+
+// 6. Pages
+@use "pages";
+
+// 7. Themes
+@use "themes";
+```
+
+## Responsive Design
+
+Use mixins for consistent media queries:
+
+```scss
+// In _mixins.scss
+@mixin mobile {
+  @media (max-width: 767px) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+// Usage
+.element {
+  width: 100%;
+  
+  @include tablet {
+    width: 50%;
+  }
+  
+  @include desktop {
+    width: 33.33%;
+  }
+}
+```
+
+## Accessibility
+
+Ensure all design system components meet WCAG 2.1 AA standards:
+- Use sufficient color contrast
+- Provide focus states for interactive elements
+- Ensure text is resizable
+- Design with keyboard navigation in mind
