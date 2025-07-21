@@ -10,12 +10,8 @@
 // ==========================================================================
 
 .services-section {
-  background-color: $shades-black;
-  padding: 5rem 0; // 80px mobile
-  
-  @include md {
-    padding: 8.75rem 0; // 140px desktop
-  }
+  // Inherits default section styling from layout/section.scss
+  // Background and padding handled by .section--dark class
 }
 
 // ==========================================================================
