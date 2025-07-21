@@ -92,7 +92,6 @@
   width: 100%;
   aspect-ratio: 16 / 10; // Maintain consistent aspect ratio
   overflow: hidden;
-  border-radius: 8px;
   background-color: $neutral-200;
   
   img {
@@ -120,7 +119,7 @@
 .work-item__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   
   @include mobile {
