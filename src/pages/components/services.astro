@@ -1,0 +1,62 @@
+---
+import DevLayout from '../../layouts/DevLayout.astro';
+import ServicesComponent from '../../components/Services.astro';
+---
+<DevLayout>
+  <ServicesComponent />
+  
+  <!-- Additional content to test and document the Services component -->
+  <section style="padding: 4rem 2rem; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Services Component Documentation</h2>
+      <p style="color: #546286; line-height: 1.6;">
+        This page demonstrates the Services component. The services section above showcases our six core service offerings
+        with icons, titles, and descriptions in a responsive grid layout.
+      </p>
+      
+      <div style="margin-top: 2rem; padding: 2rem; background: #F5F6F9; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Services Component Features:</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #546286;">
+          <li>Dark background theme with teal accent colors</li>
+          <li>Responsive grid layout (1 column mobile, 3 columns desktop)</li>
+          <li>Six service cards with custom SVG icons</li>
+          <li>Hover effects with transform and shadow animations</li>
+          <li>Uses existing design system typography and spacing</li>
+          <li>Section header with pre-title and main heading</li>
+          <li>Built using layout section classes for consistency</li>
+          <li>Icons sourced from public/icons directory</li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 2rem; background: #001412; border-radius: 8px; color: #fff;">
+        <h3 style="margin-bottom: 1rem; color: #33B8A9;">Services Offered:</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: left;">
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">UI/UX</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Creating user centered design for web/app interfaces.</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">Brand Identity</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Comprehensive brand identity services to businesses of all sizes.</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">SEO</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Excellent Search Engine Optimization to capture more traffic and revenue.</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">Web Design</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Crafting web design that not only works but looks good.</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">Web Development</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Developing beautifully designed websites efficiently and fast.</p>
+          </div>
+          <div>
+            <h4 style="color: #33B8A9; margin-bottom: 0.5rem;">App Development</h4>
+            <p style="font-size: 0.9rem; line-height: 1.4;">Building apps that add value and boost efficiency through cutting edge technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DevLayout>
