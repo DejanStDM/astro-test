@@ -1,0 +1,45 @@
+// ==========================================================================
+// Container Layout Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// Bootstrap-like container with responsive max-widths
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Responsive max-widths based on your specifications
+  // Small screens - no max-width, just padding
+  @include mobile {
+    max-width: none;
+  }
+
+  // Tablet and up - 705px container
+  @include tablet {
+    max-width: 705px;
+  }
+
+  // Large screens - 1120px container
+  @media (min-width: $lg) {
+    max-width: 1120px;
+  }
+
+  // Extra large screens - 1640px container
+  @media (min-width: $xxl) {
+    max-width: 1640px;
+  }
+}
+
+// Container fluid variant (full width with padding)
+.container-fluid {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
