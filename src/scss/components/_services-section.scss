@@ -1,0 +1,127 @@
+// ==========================================================================
+// Services Section Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+// ==========================================================================
+// Services Section
+// ==========================================================================
+
+.services-section {
+  background-color: $shades-black;
+  padding: 5rem 0; // 80px mobile
+  
+  @include md {
+    padding: 8.75rem 0; // 140px desktop
+  }
+}
+
+// ==========================================================================
+// Services Grid
+// ==========================================================================
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // 32px
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; // 32px
+  
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// ==========================================================================
+// Service Item
+// ==========================================================================
+
+.service-item {
+  background-color: #00211D; // Primary-900 from Figma
+  padding: 2rem; // 32px
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; // 24px
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  @include md {
+    padding: 2rem 2rem 2.5rem 2rem; // 32px 32px 40px 32px on desktop
+  }
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// ==========================================================================
+// Service Icon
+// ==========================================================================
+
+.service-icon {
+  width: 5rem; // 80px
+  height: 5rem; // 80px
+  background-color: #004B49; // Primary-800 from Figma
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(34%) saturate(2234%) hue-rotate(135deg) brightness(95%) contrast(89%);
+    // This filter makes the icons the teal color #66CABE from the Figma
+  }
+}
+
+// ==========================================================================
+// Service Content
+// ==========================================================================
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // 16px
+  flex: 1;
+}
+
+.service-title {
+  @include heading-h3($weight-semi-bold);
+  color: $white;
+  margin: 0;
+  
+  @include md {
+    font-size: 2rem; // 32px
+    line-height: 2.625rem; // 42px  
+    letter-spacing: -0.04rem; // -0.64px
+  }
+}
+
+.service-description {
+  @include paragraph-p3($weight-regular);
+  color: $white;
+  margin: 0;
+  
+  @include md {
+    font-size: 1.125rem; // 18px
+    line-height: 1.4375rem; // 23px
+    letter-spacing: -0.0225rem; // -0.36px
+  }
+}
+
+// ==========================================================================
+// Container Override for Services
+// ==========================================================================
+
+.services-section .container {
+  @include container();
+  max-width: 90rem; // 1440px
+}
