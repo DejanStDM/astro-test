@@ -200,13 +200,14 @@
     border-radius: 50%;
     justify-self: center;
     position: relative;
-    z-index: 2;
+    z-index: 10; // Above the timeline line
 
     @media (max-width: $md - 1px) {
       position: absolute;
       left: 24px;
       top: 0;
       transform: translateX(-50%);
+      z-index: 10;
     }
   }
 
