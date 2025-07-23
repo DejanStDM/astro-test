@@ -115,13 +115,17 @@
     &::before {
       content: '';
       position: absolute;
-      left: 50%;
+      left: calc(300px + 30px + 14px); // Position at center of marker column
       top: 0;
       bottom: 0;
       width: 4px;
       background-color: $primary-600;
       transform: translateX(-50%);
-      z-index: 1;
+      z-index: 0; // Behind markers
+
+      @media (max-width: $lg - 1px) {
+        left: calc(250px + 25px + 14px); // Adjust for smaller grid
+      }
 
       @media (max-width: $md - 1px) {
         left: 24px;
