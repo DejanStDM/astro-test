@@ -150,13 +150,19 @@
   }
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 300px 28px 1fr;
     align-items: flex-start;
     width: 100%;
-    gap: 60px;
+    gap: 30px;
+
+    @media (max-width: $lg - 1px) {
+      grid-template-columns: 250px 28px 1fr;
+      gap: 25px;
+    }
 
     @media (max-width: $md - 1px) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
       gap: 16px;
       padding-left: 60px;
     }
@@ -171,34 +177,31 @@
     letter-spacing: -0.8px;
     margin: 0;
     text-align: right;
-    flex: 0 0 300px;
 
     @media (max-width: $lg - 1px) {
       font-size: 32px;
       letter-spacing: -0.64px;
-      flex: 0 0 250px;
     }
 
     @media (max-width: $md - 1px) {
       font-size: 28px;
       letter-spacing: -0.56px;
       text-align: left;
-      flex: none;
     }
   }
 
   &__marker {
-    position: absolute;
-    left: 50%;
-    top: 0;
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    transform: translateX(-50%);
+    justify-self: center;
+    position: relative;
     z-index: 2;
 
     @media (max-width: $md - 1px) {
+      position: absolute;
       left: 24px;
+      top: 0;
       transform: translateX(-50%);
     }
   }
@@ -206,7 +209,6 @@
   &__card {
     background-color: $primary-600;
     padding: 40px 32px;
-    flex: 1;
     min-height: 120px;
     display: flex;
     align-items: center;
