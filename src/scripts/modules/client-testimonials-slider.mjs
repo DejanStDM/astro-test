@@ -23,15 +23,15 @@ export function initClientTestimonialsSlider() {
         loop: true,
         centeredSlides: false,
 
-        // Responsive breakpoints
+        // Responsive breakpoints (mobile first)
         breakpoints: {
           // When window width is >= 768px (tablet)
           768: {
             slidesPerView: 2,
             spaceBetween: 24,
           },
-          // When window width is >= 992px (desktop)
-          992: {
+          // When window width is >= 1024px (desktop)
+          1024: {
             slidesPerView: 3,
             spaceBetween: 32,
           },
@@ -41,12 +41,6 @@ export function initClientTestimonialsSlider() {
         navigation: {
           nextEl: '.client-testimonials__arrow--next',
           prevEl: '.client-testimonials__arrow--prev',
-        },
-
-        // Add some additional options for better UX
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
         },
 
         // Enable keyboard navigation
