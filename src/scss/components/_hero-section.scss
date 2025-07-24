@@ -3,107 +3,104 @@
 // ==========================================================================
 
 @use "../utils/variables" as *;
-@use "../utils/mixins" as *;
 @use "sass:color";
 
-// Page section wrapper styles
-.page-sec--hero-section {
+// Hero section specific styles
+.hero-section {
   position: relative;
-
-  min-height: 900px;
+  min-height: 600px; // Mobile first
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
-  @media (max-width: 767px) {
-    min-height: 600px;
-    height: 100vh;
+  @media (min-width: $md) {
+    min-height: 900px;
   }
 
-  // Background layers (positioned relative to page-sec)
-  .hero-section__background {
+  // Background layers
+  &__background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -2;
   }
 
-  .hero-section__background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &__background-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
- 
   }
 
-
-  // Hero container specific positioning
-  .hero-section__container {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-// Hero section component styles
-.hero-section {
-  width: 100%;
-
+  // Hero content container
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 48px;
-
-    @media (max-width: 767px) {
-      gap: 32px;
-    }
+    z-index: 1;
+    position: relative;
+    max-width: 100%;
   }
 
   &__title {
+    margin: 0 0 1.5rem 0;
     color: $white;
-    margin: 0;
-
-    @media (max-width: 767px) {
-      max-width: 100%;
+    max-width: 800px;
+    
+    @media (min-width: $md) {
+      margin: 0 0 2rem 0;
     }
   }
 
   &__title-highlight {
-    // color: $primary-600;
-    display: block;
+    color: $primary-500;
+  }
+
+  &__description {
+    margin: 0 0 2rem 0;
+    color: $white;
+    max-width: 600px;
+    font-size: 16px; // Mobile first
+    line-height: 1.5;
+    
+    @media (min-width: $md) {
+      font-size: 18px;
+      margin: 0 0 2.5rem 0;
+    }
   }
 
   &__actions {
     display: flex;
-    gap: 24px;
+    flex-direction: column; // Mobile first - stacked
+    gap: 1rem;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @media (max-width: 767px) {
-      gap: 16px;
-      flex-direction: column;
-      width: 100%;
+    width: 100%;
+    
+    @media (min-width: $sm) {
+      flex-direction: row;
+      gap: 1.5rem;
+      justify-content: center;
+      width: auto;
     }
   }
 
-  &__btn {
-    min-width: 160px;
-
-    @media (max-width: 767px) {
-      width: 100%;
-      max-width: 300px;
-    }
+  // Gradient overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 20, 18, 0.7) 0%,
+      rgba(0, 133, 118, 0.3) 100%
+    );
+    z-index: -1;
   }
 }
