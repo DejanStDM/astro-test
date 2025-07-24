@@ -1,0 +1,41 @@
+---
+export interface Props {
+  image: string;
+  imageAlt: string;
+  category: string;
+  readTime: string;
+  title: string;
+  excerpt: string;
+  href?: string;
+}
+
+const { image, imageAlt, category, readTime, title, excerpt, href = "#" } = Astro.props;
+---
+
+<article class="blog-teaser-card">
+  <a href={href} class="blog-teaser-card__link">
+    <div class="blog-teaser-card__image-container">
+      <img 
+        src={image} 
+        alt={imageAlt} 
+        class="blog-teaser-card__image"
+      />
+    </div>
+    
+    <div class="blog-teaser-card__content">
+      <div class="blog-teaser-card__tags">
+        <div class="blog-teaser-card__main-tags">
+          <span class="tag tag--primary">{category}</span>
+        </div>
+        <span class="tag tag--primary">{readTime}</span>
+      </div>
+      
+      <div class="blog-teaser-card__info">
+        <div class="blog-teaser-card__text">
+          <h3 class="blog-teaser-card__title">{title}</h3>
+          <p class="blog-teaser-card__excerpt">{excerpt}</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
