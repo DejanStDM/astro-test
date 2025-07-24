@@ -150,6 +150,8 @@
     align-items: stretch; // This ensures all cards have equal height
     gap: 32px;
     align-self: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
 
     // Desktop: 3 cards in a row
     @include lg {
@@ -168,6 +170,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 40px; // Add proper spacing between stacked cards
+      flex-wrap: nowrap;
     }
   }
 }
