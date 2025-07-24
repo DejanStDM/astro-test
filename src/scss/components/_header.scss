@@ -100,13 +100,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: $shades-black;
-    z-index: 999;
+    z-index: 1002; // Higher than hamburger button
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
     overflow-y: auto;
+    overflow-x: hidden; // Prevent horizontal scroll
 
     &.nav-open {
       transform: translateX(0);
