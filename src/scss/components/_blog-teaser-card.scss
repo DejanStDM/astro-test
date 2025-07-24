@@ -155,11 +155,4 @@
 // ==========================================================================
 // Responsive Grid Behavior
 // ==========================================================================
-
-@include sm {
-  .blog-teaser-card {
-    &:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
-}
+// Note: Spacing is handled by the parent container (.latest-articles__content)
