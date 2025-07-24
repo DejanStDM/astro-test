@@ -11,7 +11,7 @@
   min-width: 0;
   height: 100%;
 
-  @include sm {
+  @media (max-width: #{$sm - 1px}) {
     // flex: none;
     // width: 100%;
   }
