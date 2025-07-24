@@ -206,14 +206,14 @@
 // Responsive Adjustments
 // ==========================================================================
 
-@include mobile {
+@media (max-width: #{$md - 1px}) {
   .selected-work-header {
     .btn {
       align-self: flex-start;
       width: auto;
     }
   }
-  
+
   .work-item__header {
     .tag-group {
       justify-content: flex-start;
