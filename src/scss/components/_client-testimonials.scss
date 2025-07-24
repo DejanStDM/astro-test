@@ -5,25 +5,9 @@
 @use "../utils/variables" as *;
 
 .client-testimonials {
-  padding: 60px 0; // Mobile first
-  background-color: $shades-black;
-
-  @media (min-width: $md) {
-    padding: 100px 0;
-  }
-
-  &__container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px; // Mobile first
-    max-width: 100%;
-    overflow: hidden;
-
-    @media (min-width: $lg) {
-      padding-left: 80px;
-      padding-right: 80px;
-    }
-  }
+  // Section styling handled by .section class
+  // Background handled by .section--dark class
+  // Padding handled by .section class
 
   &__title {
     font-family: $font-primary;
