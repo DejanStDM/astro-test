@@ -8,33 +8,35 @@
   padding: 60px 0;
   background-color: $shades-black;
 
-  @include md {
+  @media (min-width: $md) {
     padding: 100px 0;
   }
 
   &__container {
-    @include container;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
     max-width: 100%;
     overflow: hidden;
 
-    & {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    @include lg {
+    @media (min-width: $lg) {
       padding-left: 80px;
       padding-right: 80px;
     }
   }
 
   &__title {
-    @include heading-h1-small($weight-bold);
+    font-family: $font-primary;
+    font-weight: $weight-bold;
+    font-size: 27px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
     color: $shades-white;
     text-align: center;
     margin-bottom: 40px;
 
-    @include md {
+    @media (min-width: $md) {
+      font-size: 54px;
       margin-bottom: 60px;
     }
   }
@@ -71,7 +73,7 @@
     height: 100%;
     border-radius: 0;
 
-    @include md {
+    @media (min-width: $md) {
       padding: 40px;
     }
   }
@@ -82,16 +84,25 @@
     gap: 24px;
     height: 100%;
 
-    @include md {
+    @media (min-width: $md) {
       gap: 32px;
     }
   }
 
   &__quote {
-    @include paragraph-p2($weight-regular);
+    font-family: $font-secondary;
+    font-weight: $weight-regular;
+    font-size: 15px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
     color: $shades-white;
     flex-grow: 1;
     margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+      line-height: 1.3;
+    }
   }
 
   &__client {
@@ -115,28 +126,37 @@
     gap: 4px;
     flex: 1;
 
-    @include md {
+    @media (min-width: $md) {
       gap: 8px;
     }
   }
 
   &__name {
-    @include heading-h4($weight-bold);
+    font-family: $font-primary;
+    font-weight: $weight-bold;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
     color: $shades-white;
     margin: 0;
 
-    @include md {
-      @include heading-h4($weight-bold);
+    @media (min-width: $md) {
+      font-size: 24px;
     }
   }
 
   &__role {
-    @include paragraph-p3($weight-regular);
+    font-family: $font-secondary;
+    font-weight: $weight-regular;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
     color: $shades-white;
     margin: 0;
 
-    @include md {
-      @include paragraph-p3($weight-regular);
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 1.28;
     }
   }
 
