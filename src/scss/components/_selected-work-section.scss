@@ -53,11 +53,11 @@
   grid-template-columns: 1fr;
   gap: 3.75rem; // 60px
   
-  @include md {
+  @media (min-width: $md) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  @include mobile {
+
+  @media (max-width: #{$md - 1px}) {
     gap: 2.5rem; // 40px on mobile
   }
 }
