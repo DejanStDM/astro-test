@@ -8,37 +8,39 @@
   padding: 140px 0;
   background-color: $shades-black;
   
-  @include lg {
+  @media (min-width: $lg) {
     padding: 100px 0;
   }
-  
-  @include md {
+
+  @media (min-width: $md) {
     padding: 80px 0;
   }
-  
-  @include sm {
+
+  @media (max-width: #{$sm - 1px}) {
     padding: 60px 0;
   }
   
   &__container {
-    @include container;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 60px;
-    
-    @include lg {
+
+    @media (min-width: $lg) {
       padding-left: 80px;
       padding-right: 80px;
     }
-    
-    @include md {
+
+    @media (min-width: $md) {
       padding-left: 40px;
       padding-right: 40px;
       gap: 50px;
     }
-    
-    @include sm {
+
+    @media (max-width: #{$sm - 1px}) {
       padding-left: 20px;
       padding-right: 20px;
       gap: 40px;
@@ -52,7 +54,7 @@
     align-items: center;
     align-self: stretch;
 
-    @include sm {
+    @media (max-width: #{$sm - 1px}) {
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;
@@ -60,24 +62,27 @@
   }
   
   &__title {
-    @include heading-h1-small($weight-bold);
+    font-family: $font-primary;
+    font-weight: $weight-bold;
+    font-size: 27px;
+    line-height: 1.3;
+    letter-spacing: -1.28px;
     color: $shades-white;
     margin: 0;
-    letter-spacing: -1.28px;
-    
-    @include lg {
+
+    @media (min-width: $lg) {
       font-size: 56px;
       line-height: 73px;
       letter-spacing: -1.12px;
     }
-    
-    @include md {
-      font-size: 48px;
+
+    @media (min-width: $md) {
+      font-size: 54px;
       line-height: 62px;
       letter-spacing: -0.96px;
     }
-    
-    @include sm {
+
+    @media (max-width: #{$sm - 1px}) {
       font-size: 36px;
       line-height: 47px;
       letter-spacing: -0.72px;
@@ -96,13 +101,13 @@
     text-decoration: none;
     transition: all 0.3s ease;
     
-    @include md {
+    @media (min-width: $md) {
       width: 160px;
       height: 60px;
       padding: 14px 40px;
     }
-    
-    @include sm {
+
+    @media (max-width: #{$sm - 1px}) {
       width: 140px;
       height: 52px;
       padding: 12px 32px;
@@ -117,13 +122,13 @@
       line-height: 23px;
       letter-spacing: -0.36px;
       
-      @include md {
+      @media (min-width: $md) {
         font-size: 16px;
         line-height: 21px;
         letter-spacing: -0.32px;
       }
-      
-      @include sm {
+
+      @media (max-width: #{$sm - 1px}) {
         font-size: 15px;
         line-height: 19px;
         letter-spacing: -0.3px;
@@ -153,19 +158,19 @@
     width: 100%;
 
     // Desktop: 3 cards in a row
-    @include lg {
+    @media (min-width: $lg) {
       flex-direction: row;
       gap: 24px;
     }
 
     // Tablet: 3 cards in a row (maintaining desktop layout)
-    @include md {
+    @media (min-width: $md) {
       flex-direction: row;
       gap: 20px;
     }
 
     // Mobile: Cards stacked one after another
-    @include sm {
+    @media (max-width: #{$sm - 1px}) {
       flex-direction: column;
       align-items: flex-start;
       gap: 40px; // Add proper spacing between stacked cards
