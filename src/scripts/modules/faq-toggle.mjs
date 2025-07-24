@@ -3,19 +3,28 @@
 // ==========================================================================
 
 export function initFaqToggle() {
+  // Wait for DOM to be ready if called immediately
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaqToggleLogic);
+  } else {
+    initFaqToggleLogic();
+  }
+}
+
+function initFaqToggleLogic() {
   const faqItems = document.querySelectorAll('[data-faq-item]');
-  
+
   if (!faqItems.length) return;
-  
+
   faqItems.forEach((item) => {
     const toggle = item.querySelector('[data-faq-toggle]');
     const answer = item.querySelector('[data-faq-answer]');
-    
+
     if (!toggle || !answer) return;
-    
+
     toggle.addEventListener('click', () => {
       const isExpanded = item.classList.contains('faq__item--expanded');
-      
+
       // Close all other FAQ items
       faqItems.forEach((otherItem) => {
         if (otherItem !== item) {
@@ -26,7 +35,7 @@ export function initFaqToggle() {
           }
         }
       });
-      
+
       // Toggle current item
       if (isExpanded) {
         item.classList.remove('faq__item--expanded');
@@ -38,6 +47,3 @@ export function initFaqToggle() {
     });
   });
 }
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', initFaqToggle);
