@@ -152,7 +152,7 @@
   flex-direction: column;
   gap: 1.25rem; // 20px
   
-  @include mobile {
+  @media (max-width: #{$md - 1px}) {
     gap: 1rem; // 16px on mobile
   }
 }
