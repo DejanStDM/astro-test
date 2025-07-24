@@ -1,0 +1,185 @@
+// ==========================================================================
+// Client Testimonials Component
+// ==========================================================================
+
+@use "../utils" as *;
+
+.client-testimonials {
+  padding: 60px 0;
+  background-color: $shades-black;
+
+  @include md {
+    padding: 100px 0;
+  }
+
+  &__container {
+    @include container;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include lg {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  &__title {
+    @include heading-h1-small($weight-bold);
+    color: $shades-white;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include md {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__swiper {
+    width: 100%;
+    overflow: visible;
+    
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+    
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    background-color: var(--Primary-900, #00211D);
+    height: 100%;
+    border-radius: 0;
+
+    @include md {
+      padding: 40px;
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+
+    @include md {
+      gap: 32px;
+    }
+  }
+
+  &__quote {
+    @include paragraph-p2($weight-regular);
+    color: $shades-white;
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  &__client {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+
+    @include md {
+      gap: 8px;
+    }
+  }
+
+  &__name {
+    @include heading-h4($weight-bold);
+    color: $shades-white;
+    margin: 0;
+
+    @include md {
+      @include heading-h4($weight-bold);
+    }
+  }
+
+  &__role {
+    @include paragraph-p3($weight-regular);
+    color: $shades-white;
+    margin: 0;
+
+    @include md {
+      @include paragraph-p3($weight-regular);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 8px;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 9px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1); // Make arrows white
+    }
+  }
+}
+
+// Swiper specific overrides
+.client-testimonials__swiper {
+  .swiper-slide {
+    // Ensure equal height for all cards
+    display: flex;
+    
+    .client-testimonials__card {
+      width: 100%;
+    }
+  }
+}
