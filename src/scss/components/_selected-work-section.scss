@@ -19,14 +19,16 @@
 
 .selected-work-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; // Mobile first - stacked
+  gap: 2rem;
   align-items: flex-start;
   width: 100%;
   
-  @media (max-width: #{$md - 1px}) {
-    flex-direction: column;
-    gap: 2rem;
+  @media (min-width: $md) {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    gap: 0;
   }
   
   &__content {
@@ -41,24 +43,21 @@
 .selected-work-grid {
   display: flex;
   flex-direction: column;
-  gap: 3.75rem; // 60px between rows
-
-  @media (max-width: #{$md - 1px}) {
-    gap: 2.5rem; // 40px on mobile
+  gap: 2.5rem; // Mobile first - smaller gap
+  
+  @media (min-width: $md) {
+    gap: 3.75rem; // 60px between rows
   }
 }
 
 .selected-work-row {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.75rem; // 60px
+  grid-template-columns: 1fr; // Mobile first - single column
+  gap: 2.5rem; // Mobile first - smaller gap
   
   @media (min-width: $md) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: #{$md - 1px}) {
-    gap: 2.5rem; // 40px on mobile
+    gap: 3.75rem; // 60px
   }
 }
 
@@ -150,23 +149,24 @@
 .work-item__content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; // 20px
+  gap: 1rem; // Mobile first - smaller gap
   
-  @media (max-width: #{$md - 1px}) {
-    gap: 1rem; // 16px on mobile
+  @media (min-width: $md) {
+    gap: 1.25rem; // 20px
   }
 }
 
 .work-item__header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column; // Mobile first - stacked
+  gap: 0.75rem;
+  align-items: flex-start;
   
-  @media (max-width: #{$md - 1px}) {
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: flex-start;
+  @media (min-width: $md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -175,10 +175,10 @@
   margin: 0;
   font-family: $font-primary;
   font-weight: $weight-semi-bold;
-  font-size: 16px;
+  font-size: 16px; // Mobile first
   line-height: 1.31;
   letter-spacing: -0.02em;
-
+  
   @media (min-width: $md) {
     font-size: 2.25rem; // 36px
     line-height: 2.9375rem; // 47px
@@ -191,10 +191,10 @@
   margin: 0;
   font-family: $font-secondary;
   font-weight: $weight-regular;
-  font-size: 14px;
+  font-size: 14px; // Mobile first
   line-height: 1.29;
   letter-spacing: -0.02em;
-
+  
   @media (min-width: $md) {
     font-size: 1.125rem; // 18px
     line-height: 1.4375rem; // 23px
@@ -213,7 +213,7 @@
       width: auto;
     }
   }
-
+  
   .work-item__header {
     .tag-group {
       justify-content: flex-start;
