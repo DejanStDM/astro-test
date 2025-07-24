@@ -84,16 +84,16 @@
     }
   }
 
-  // Hamburger Animation - When menu is open
-  &.menu-open &__hamburger-line {
-    &:first-child {
-      transform: rotate(-45deg) translate(-3px, 3px);
-    }
-
-    &:last-child {
-      transform: rotate(45deg) translate(-3px, -3px);
-    }
-  }
+  // Remove hamburger animation - menu overlaps the button
+  // &.menu-open &__hamburger-line {
+  //   &:first-child {
+  //     transform: rotate(-45deg) translate(-3px, 3px);
+  //   }
+  //
+  //   &:last-child {
+  //     transform: rotate(45deg) translate(-3px, -3px);
+  //   }
+  // }
 
   // Full Screen Navigation
   &__nav {
