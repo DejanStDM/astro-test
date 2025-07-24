@@ -84,15 +84,15 @@
       
       .faq__toggle {
         background-color: $primary-600;
-        
+
         .faq__icon--plus {
           opacity: 0;
-          transform: rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
         }
-        
+
         .faq__icon--close {
           opacity: 1;
-          transform: rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
         }
       }
     }
