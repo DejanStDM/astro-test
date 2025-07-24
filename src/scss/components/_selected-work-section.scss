@@ -163,7 +163,7 @@
   align-items: center;
   gap: 1rem;
   
-  @include mobile {
+  @media (max-width: #{$md - 1px}) {
     flex-direction: column;
     gap: 0.75rem;
     align-items: flex-start;
