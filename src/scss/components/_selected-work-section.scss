@@ -23,7 +23,7 @@
   align-items: flex-start;
   width: 100%;
   
-  @include mobile {
+  @media (max-width: #{$md - 1px}) {
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
