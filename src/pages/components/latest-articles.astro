@@ -1,0 +1,62 @@
+---
+import DevLayout from "../../layouts/DevLayout.astro";
+import LatestArticles from "../../components/LatestArticles.astro";
+---
+<DevLayout>
+  <LatestArticles />
+  
+  <!-- Additional content to test scroll -->
+  <section style="padding: 4rem 2rem; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Latest Articles Component Test</h2>
+      <p style="color: #546286; line-height: 1.6;">
+        This page demonstrates the Latest Articles component. The section above displays 
+        three blog teaser cards in a responsive grid layout with a "View All" button linking to the blog main page.
+      </p>
+      
+      <div style="margin-top: 2rem; padding: 2rem; background: #F5F6F9; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Latest Articles Component Features:</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #546286;">
+          <li>Responsive grid layout: 3 columns on desktop, 2 on tablet, 1 on mobile</li>
+          <li>Reusable BlogTeaserCard component for consistent styling</li>
+          <li>Hover effects with image scaling and card elevation</li>
+          <li>Uses existing tag component system</li>
+          <li>Links to blog-main.astro page via "View All" button</li>
+          <li>Individual cards link to blog-single.astro</li>
+          <li>Optimized images with proper alt text for accessibility</li>
+          <li>Modular design matching project architecture</li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 2rem; background: #EEF2FE; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Implementation Code:</h3>
+        <div style="text-align: left;">
+          <pre><code>---
+import LatestArticles from "../../components/LatestArticles.astro";
+---
+
+&lt;LatestArticles /&gt;</code></pre>
+        </div>
+      </div>
+      
+      <div style="margin-top: 2rem; padding: 2rem; background: #E8F5E8; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">BlogTeaserCard Usage:</h3>
+        <div style="text-align: left;">
+          <pre><code>---
+import BlogTeaserCard from './BlogTeaserCard.astro';
+---
+
+&lt;BlogTeaserCard
+  image="/images/article-1.jpg"
+  imageAlt="Brand identity design elements"
+  category="brand identity"
+  readTime="5 Min Read"
+  title="The importance of a strong brand identity"
+  excerpt="This post could discuss the process..."
+  href="/blog-single"
+/&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+</DevLayout>

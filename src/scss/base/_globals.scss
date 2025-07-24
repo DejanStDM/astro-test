@@ -10,7 +10,11 @@ body {
 }
 
 body {
-    
+    padding-top: 80px; // Space for fixed header
+
+    @media (min-width: 768px) {
+        padding-top: 90px;
+    }
 }
 
 ul {

@@ -3,7 +3,6 @@
 // ==========================================================================
 
 @use "../utils/variables" as *;
-@use "../utils/mixins" as *;
 
 // ==========================================================================
 // Services Section
@@ -26,10 +25,10 @@
 
 .services-row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; // Mobile first - single column
   gap: 2rem; // 32px
   
-  @include md {
+  @media (min-width: $md) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -40,13 +39,13 @@
 
 .service-item {
   background-color: #00211D; // Primary-900 from Figma
-  padding: 2rem; // 32px
+  padding: 2rem; // Mobile first - same padding
   display: flex;
   flex-direction: column;
   gap: 1.5rem; // 24px
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
-  @include md {
+  @media (min-width: $md) {
     padding: 2rem 2rem 2.5rem 2rem; // 32px 32px 40px 32px on desktop
   }
   
@@ -92,9 +91,13 @@
 .service-title {
   color: $white;
   margin: 0;
-  @include heading-h3($weight-semi-bold);
+  font-family: $font-primary;
+  font-weight: $weight-semi-bold;
+  font-size: 16px; // Mobile first
+  line-height: 1.31;
+  letter-spacing: -0.02em;
 
-  @include md {
+  @media (min-width: $md) {
     font-size: 2rem; // 32px
     line-height: 2.625rem; // 42px
     letter-spacing: -0.04rem; // -0.64px
@@ -104,9 +107,13 @@
 .service-description {
   color: $white;
   margin: 0;
-  @include paragraph-p3($weight-regular);
+  font-family: $font-secondary;
+  font-weight: $weight-regular;
+  font-size: 14px; // Mobile first
+  line-height: 1.29;
+  letter-spacing: -0.02em;
 
-  @include md {
+  @media (min-width: $md) {
     font-size: 1.125rem; // 18px
     line-height: 1.4375rem; // 23px
     letter-spacing: -0.0225rem; // -0.36px

@@ -1,0 +1,46 @@
+---
+import BlogTeaserCard from './BlogTeaserCard.astro';
+---
+
+<section class="latest-articles section section--dark">
+  <div class="section-container">
+    <div class="latest-articles__header">
+      <h2 class="latest-articles__title">Latest Articles</h2>
+      <a href="/blog-main" class="latest-articles__view-all">
+        <span>View All</span>
+      </a>
+    </div>
+    
+    <div class="latest-articles__content">
+      <BlogTeaserCard
+        image="/images/article-1.jpg"
+        imageAlt="Brand identity design elements spread on a table"
+        category="brand identity"
+        readTime="5 Min Read"
+        title="The importance of a strong brand identity"
+        excerpt="This post could discuss the process of developing a brand identity that reflects the values and mission of a business. It could include..."
+        href="/blog-single"
+      />
+      
+      <BlogTeaserCard
+        image="/images/article-2.jpg"
+        imageAlt="UI/UX design process on whiteboard"
+        category="UI/UX"
+        readTime="5 Min Read"
+        title="Top 10 UI and UX design mistakes to avoid"
+        excerpt="This post could list and discuss common mistakes that businesses make when it comes to UI and UX design, and provide tips on how..."
+        href="/blog-single"
+      />
+      
+      <BlogTeaserCard
+        image="/images/article-3.jpg"
+        imageAlt="Web development framework on multiple screens"
+        category="Web Development"
+        readTime="5 Min Read"
+        title="The benefits of using a web framework"
+        excerpt="This post could discuss the benefits of using a web framework, such as speeding up the development process or providing a consistent..."
+        href="/blog-single"
+      />
+    </div>
+  </div>
+</section>

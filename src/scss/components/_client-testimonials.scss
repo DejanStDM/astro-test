@@ -1,0 +1,197 @@
+// ==========================================================================
+// Client Testimonials Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+
+.client-testimonials {
+  // Section styling handled by .section class
+  // Background handled by .section--dark class
+  // Padding handled by .section class
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $weight-bold;
+    font-size: 27px; // Mobile first
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: $shades-white;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: $md) {
+      font-size: 54px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__swiper {
+    width: 100%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+    
+    .swiper-slide {
+      height: auto;
+      display: flex;
+      width: auto;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px; // Mobile first
+    background-color: var(--Primary-900, #00211D);
+    height: 100%;
+    border-radius: 0;
+
+    @media (min-width: $md) {
+      padding: 40px;
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; // Mobile first
+    height: 100%;
+
+    @media (min-width: $md) {
+      gap: 32px;
+    }
+  }
+
+  &__quote {
+    font-family: $font-secondary;
+    font-weight: $weight-regular;
+    font-size: 15px; // Mobile first
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    color: $shades-white;
+    flex-grow: 1;
+    margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+      line-height: 1.3;
+    }
+  }
+
+  &__client {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; // Mobile first
+    flex: 1;
+
+    @media (min-width: $md) {
+      gap: 8px;
+    }
+  }
+
+  &__name {
+    font-family: $font-primary;
+    font-weight: $weight-bold;
+    font-size: 14px; // Mobile first
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: $shades-white;
+    margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 24px;
+    }
+  }
+
+  &__role {
+    font-family: $font-secondary;
+    font-weight: $weight-regular;
+    font-size: 14px; // Mobile first
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: $shades-white;
+    margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 1.28;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 8px;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 9px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1); // Make arrows white
+    }
+  }
+}
+
+// Swiper specific overrides
+.client-testimonials__swiper {
+  .swiper-slide {
+    // Ensure equal height for all cards
+    display: flex;
+    
+    .client-testimonials__card {
+      width: 100%;
+    }
+  }
+}

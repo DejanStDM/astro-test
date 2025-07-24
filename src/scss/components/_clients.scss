@@ -1,0 +1,112 @@
+// ==========================================================================
+// Clients Section Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+
+.clients {
+  background-color: $shades-black;
+  padding: 80px 0; // Mobile first
+  
+  @media (min-width: $md) {
+    padding: 140px 0;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; // Mobile first
+    
+    @media (min-width: $md) {
+      gap: 140px;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: 32px; // Mobile first
+    font-weight: $weight-bold;
+    line-height: 1.2;
+    color: $white;
+    margin: 0;
+    
+    @media (min-width: $sm) {
+      font-size: 40px;
+    }
+    
+    @media (min-width: $md) {
+      font-size: 48px;
+      line-height: 1.25;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 56px;
+      line-height: 70px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; // Mobile first
+    
+    @media (min-width: $md) {
+      gap: 100px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Mobile: 2 columns
+    gap: 40px 20px;
+    align-items: center;
+    justify-items: center;
+    
+    @media (min-width: $sm) {
+      grid-template-columns: repeat(3, 1fr); // Tablet: 3 columns
+      gap: 50px 30px;
+    }
+    
+    @media (min-width: $md) {
+      grid-template-columns: repeat(6, 1fr); // Desktop: 6 columns
+      gap: 0 60px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px; // Mobile first
+    
+    @media (min-width: $md) {
+      height: 45px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1); // Makes logos white
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

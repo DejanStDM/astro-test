@@ -1,0 +1,43 @@
+---
+import DevLayout from "../../layouts/DevLayout.astro";
+import ClientTestimonials from "../../components/ClientTestimonials.astro";
+---
+<DevLayout>
+  <ClientTestimonials />
+  
+  <!-- Additional content to test scroll -->
+  <section style="padding: 4rem 2rem; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 1rem; color: #000E24;">Client Testimonials Component Test</h2>
+      <p style="color: #546286; line-height: 1.6;">
+        This page demonstrates the Client Testimonials component. The testimonials section above should display 
+        a responsive Swiper slider with client testimonials, navigation arrows, and smooth transitions.
+      </p>
+      
+      <div style="margin-top: 2rem; padding: 2rem; background: #F5F6F9; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Client Testimonials Component Features:</h3>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: #546286;">
+          <li>Responsive Swiper.js slider integration</li>
+          <li>Mobile: 1 slide, Tablet: 2 slides, Desktop: 3 slides</li>
+          <li>Navigation arrows for manual control</li>
+          <li>Auto-play functionality with pause on interaction</li>
+          <li>Keyboard navigation support</li>
+          <li>Loop functionality for continuous scrolling</li>
+          <li>Client testimonials with avatar, name, role, and quote</li>
+          <li>Modular JavaScript following project guidelines</li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 2rem; background: #EEF2FE; border-radius: 8px;">
+        <h3 style="margin-bottom: 1rem; color: #000E24;">Implementation Code:</h3>
+        <div style="text-align: left;">
+          <pre><code>---
+import ClientTestimonials from "../../components/ClientTestimonials.astro";
+---
+
+&lt;ClientTestimonials /&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+</DevLayout>
