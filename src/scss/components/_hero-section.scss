@@ -88,19 +88,29 @@
     }
   }
 
-  // Gradient overlay
-  &::before {
-    content: '';
+  // Background layers
+  &__background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(0, 20, 18, 0.7) 0%,
-      rgba(0, 133, 118, 0.3) 100%
-    );
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
+    // Gradient overlay
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 20, 18, 0.7) 0%,
+        rgba(0, 133, 118, 0.3) 100%
+      );
+      z-index: 1;
+    }
   }
 }
