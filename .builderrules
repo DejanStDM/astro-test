@@ -1,0 +1,6 @@
+JavaScript Usage Guidelines for Builder.io Integration
+Use only vanilla JavaScript or external libraries for all components.
+For sliders, use the Swiper.js library.
+Place all JavaScript code in separate files within src/scripts/modules/, using clear and descriptive filenames. Follow the structure and naming conventions of the existing example files in that directory.
+Do not include any <script> tags or JavaScript code directly inside .astro component files. .astro files should contain only HTML markup.
+Keep all JavaScript modular and separated from component markup.
