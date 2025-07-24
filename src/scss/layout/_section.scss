@@ -173,8 +173,3 @@
   margin-top: 0;
 }
 
-// Add specific spacing between different section types
-.section--light + .section--dark,
-.section--dark + .section--light {
-  // No additional spacing needed, handled by section padding
-}
