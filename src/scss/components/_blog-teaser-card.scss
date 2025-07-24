@@ -1,0 +1,165 @@
+// ==========================================================================
+// Blog Teaser Card Component
+// ==========================================================================
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.blog-teaser-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      
+      .blog-teaser-card__image {
+        transform: scale(1.02);
+      }
+    }
+  }
+  
+  &__image-container {
+    display: flex;
+    height: 376px;
+    align-items: flex-end;
+    align-self: stretch;
+    overflow: hidden;
+    border-radius: 0;
+    
+    @include md {
+      height: 300px;
+    }
+    
+    @include sm {
+      height: 250px;
+    }
+  }
+  
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    padding-top: 24px;
+  }
+  
+  &__tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+  
+  &__main-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    
+    @include md {
+      gap: 24px;
+    }
+    
+    @include sm {
+      gap: 16px;
+    }
+  }
+  
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    
+    @include sm {
+      gap: 12px;
+    }
+  }
+  
+  &__title {
+    @include heading-h3($weight-bold);
+    color: $shades-white;
+    margin: 0;
+    align-self: stretch;
+    letter-spacing: -0.72px;
+    
+    @include lg {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    
+    @include md {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    
+    @include sm {
+      font-size: 24px;
+      line-height: 31px;
+      letter-spacing: -0.48px;
+    }
+  }
+  
+  &__excerpt {
+    @include paragraph-p2($weight-regular);
+    color: $shades-white;
+    margin: 0;
+    align-self: stretch;
+    letter-spacing: -0.36px;
+    
+    @include md {
+      font-size: 16px;
+      line-height: 21px;
+      letter-spacing: -0.32px;
+    }
+    
+    @include sm {
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+// ==========================================================================
+// Responsive Grid Behavior
+// ==========================================================================
+
+@include sm {
+  .blog-teaser-card {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
