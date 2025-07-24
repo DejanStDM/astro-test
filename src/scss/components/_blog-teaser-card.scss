@@ -117,23 +117,26 @@
   }
   
   &__title {
-    @include heading-h3($weight-bold);
+    font-family: $font-primary;
+    font-weight: $weight-bold;
+    font-size: 16px;
+    line-height: 1.31;
+    letter-spacing: -0.72px;
     color: $shades-white;
     margin: 0;
     align-self: stretch;
-    letter-spacing: -0.72px;
-    
-    @include lg {
+
+    @media (min-width: $lg) {
       font-size: 32px;
       line-height: 42px;
     }
-    
-    @include md {
+
+    @media (min-width: $md) {
       font-size: 28px;
       line-height: 36px;
     }
-    
-    @include sm {
+
+    @media (max-width: #{$sm - 1px}) {
       font-size: 24px;
       line-height: 31px;
       letter-spacing: -0.48px;
