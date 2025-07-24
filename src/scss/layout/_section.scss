@@ -143,26 +143,6 @@
   @include container();
 }
 
-// ==========================================================================
-// Section Background Variants
-// ==========================================================================
-
-.section {
-  &--dark {
-    background-color: $shades-black;
-    color: $white;
-  }
-  
-  &--light {
-    background-color: $white;
-    color: $primary-text-black;
-  }
-  
-  &--primary {
-    background-color: $primary-500;
-    color: $white;
-  }
-}
 
 // ==========================================================================
 // Section Spacing Between Sections
