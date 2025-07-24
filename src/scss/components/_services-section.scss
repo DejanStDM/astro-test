@@ -25,7 +25,7 @@
 
 .services-row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; // Mobile first - single column
   gap: 2rem; // 32px
   
   @media (min-width: $md) {
@@ -39,7 +39,7 @@
 
 .service-item {
   background-color: #00211D; // Primary-900 from Figma
-  padding: 2rem; // 32px
+  padding: 2rem; // Mobile first - same padding
   display: flex;
   flex-direction: column;
   gap: 1.5rem; // 24px
@@ -93,7 +93,7 @@
   margin: 0;
   font-family: $font-primary;
   font-weight: $weight-semi-bold;
-  font-size: 16px;
+  font-size: 16px; // Mobile first
   line-height: 1.31;
   letter-spacing: -0.02em;
 
@@ -109,7 +109,7 @@
   margin: 0;
   font-family: $font-secondary;
   font-weight: $weight-regular;
-  font-size: 14px;
+  font-size: 14px; // Mobile first
   line-height: 1.29;
   letter-spacing: -0.02em;
 
