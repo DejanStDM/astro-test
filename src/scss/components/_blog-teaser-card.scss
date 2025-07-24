@@ -55,10 +55,11 @@
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 24px;
     padding-top: 24px;
+    flex: 1; // This allows content to grow and fill available space
   }
   
   &__tags {
