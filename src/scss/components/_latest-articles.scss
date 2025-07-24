@@ -148,18 +148,21 @@
     align-items: flex-start;
     gap: 32px;
     align-self: stretch;
-    
+
+    // Desktop: 3 cards in a row
     @include lg {
       gap: 24px;
     }
-    
+
+    // Tablet: 3 cards in a row (maintaining desktop layout)
     @include md {
       gap: 20px;
     }
-    
+
+    // Mobile: Cards stacked one after another
     @include sm {
       flex-direction: column;
-      gap: 0;
+      gap: 40px; // Add proper spacing between stacked cards
     }
   }
 }
