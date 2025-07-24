@@ -43,11 +43,11 @@
     width: 100%;
     flex-shrink: 0;
 
-    @include md {
+    @media (min-width: $md) {
       height: 300px;
     }
 
-    @include sm {
+    @media (max-width: #{$sm - 1px}) {
       height: 250px;
     }
   }
