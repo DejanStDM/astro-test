@@ -1,0 +1,126 @@
+---
+import DevLayout from "../../layouts/DevLayout.astro";
+import ClientTestimonials from "../../components/ClientTestimonials.astro";
+---
+
+<DevLayout>
+  <main>
+    <section class="showcase-section">
+      <div class="showcase-container">
+        <h1>Client Testimonials Component</h1>
+        <p>
+          A responsive testimonials slider built with Swiper.js. Shows 1 slide on mobile, 
+          2 slides on tablet (768px+), and 3 slides on desktop (992px+).
+        </p>
+        
+        <div class="component-info">
+          <h2>Features:</h2>
+          <ul>
+            <li>Mobile-first responsive design</li>
+            <li>Swiper.js slider with navigation arrows</li>
+            <li>5 testimonial slides (reusing images for slides 4-5)</li>
+            <li>Equal height cards</li>
+            <li>Smooth transitions and hover effects</li>
+          </ul>
+        </div>
+
+        <div class="showcase-component">
+          <ClientTestimonials />
+        </div>
+
+        <div class="usage-guide">
+          <h2>Usage:</h2>
+          <pre><code>---
+import ClientTestimonials from "../../components/ClientTestimonials.astro";
+---
+
+&lt;ClientTestimonials /&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+</DevLayout>
+
+<style>
+  .showcase-section {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+
+  .showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .showcase-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .showcase-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .component-info {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .component-info h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .component-info ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .component-info li {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+
+  .showcase-component {
+    margin: 3rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .usage-guide {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .usage-guide h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .usage-guide pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  .usage-guide code {
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #333;
+  }
+</style>
