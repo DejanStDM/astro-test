@@ -2,6 +2,8 @@
 // Clients Section Component
 // ==========================================================================
 
+@use "../utils/variables" as *;
+
 .clients {
   background-color: $shades-black;
   padding: 80px 0; // Mobile first
