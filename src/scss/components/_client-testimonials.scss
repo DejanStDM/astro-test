@@ -5,7 +5,7 @@
 @use "../utils/variables" as *;
 
 .client-testimonials {
-  padding: 60px 0;
+  padding: 60px 0; // Mobile first
   background-color: $shades-black;
 
   @media (min-width: $md) {
@@ -15,7 +15,7 @@
   &__container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; // Mobile first
     max-width: 100%;
     overflow: hidden;
 
@@ -28,7 +28,7 @@
   &__title {
     font-family: $font-primary;
     font-weight: $weight-bold;
-    font-size: 27px;
+    font-size: 27px; // Mobile first
     line-height: 1.3;
     letter-spacing: -0.02em;
     color: $shades-white;
@@ -53,11 +53,11 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-
+    
     .swiper-wrapper {
       align-items: stretch;
     }
-
+    
     .swiper-slide {
       height: auto;
       display: flex;
@@ -68,7 +68,7 @@
   &__card {
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 30px 20px; // Mobile first
     background-color: var(--Primary-900, #00211D);
     height: 100%;
     border-radius: 0;
@@ -81,7 +81,7 @@
   &__card-content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 24px; // Mobile first
     height: 100%;
 
     @media (min-width: $md) {
@@ -92,7 +92,7 @@
   &__quote {
     font-family: $font-secondary;
     font-weight: $weight-regular;
-    font-size: 15px;
+    font-size: 15px; // Mobile first
     line-height: 1.33;
     letter-spacing: -0.02em;
     color: $shades-white;
@@ -123,7 +123,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 4px; // Mobile first
     flex: 1;
 
     @media (min-width: $md) {
@@ -134,7 +134,7 @@
   &__name {
     font-family: $font-primary;
     font-weight: $weight-bold;
-    font-size: 14px;
+    font-size: 14px; // Mobile first
     line-height: 1.29;
     letter-spacing: -0.02em;
     color: $shades-white;
@@ -148,7 +148,7 @@
   &__role {
     font-family: $font-secondary;
     font-weight: $weight-regular;
-    font-size: 14px;
+    font-size: 14px; // Mobile first
     line-height: 1.29;
     letter-spacing: -0.02em;
     color: $shades-white;
