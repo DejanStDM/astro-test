@@ -18,16 +18,6 @@
     min-height: 900px;
   }
 
-  // Background layers
-  &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
-
   &__background-image {
     width: 100%;
     height: 100%;
@@ -47,12 +37,12 @@
   }
 
   &__title {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 24px 0;
     color: $white;
     max-width: 800px;
-    
+
     @media (min-width: $md) {
-      margin: 0 0 2rem 0;
+      margin: 0 0 32px 0;
     }
   }
 
@@ -61,28 +51,28 @@
   }
 
   &__description {
-    margin: 0 0 2rem 0;
+    margin: 0 0 32px 0;
     color: $white;
     max-width: 600px;
     font-size: 16px; // Mobile first
     line-height: 1.5;
-    
+
     @media (min-width: $md) {
       font-size: 18px;
-      margin: 0 0 2.5rem 0;
+      margin: 0 0 40px 0;
     }
   }
 
   &__actions {
     display: flex;
     flex-direction: column; // Mobile first - stacked
-    gap: 1rem;
+    gap: 16px;
     align-items: center;
     width: 100%;
-    
+
     @media (min-width: $sm) {
       flex-direction: row;
-      gap: 1.5rem;
+      gap: 24px;
       justify-content: center;
       width: auto;
     }
