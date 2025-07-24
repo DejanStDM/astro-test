@@ -8,8 +8,18 @@
 .blog-teaser-card {
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
+  flex: 1 1 0;
+  min-width: 0; // Allows flex items to shrink below their content size
+  max-width: calc(33.333% - 22px); // Ensures 3 cards fit with gap
   height: 100%; // Ensures card fills parent height
+
+  @include md {
+    max-width: calc(33.333% - 14px); // Account for smaller gap on medium screens
+  }
+
+  @include sm {
+    max-width: 100%; // Full width on mobile
+  }
 
   &__link {
     display: flex;
